@@ -1,25 +1,27 @@
 import React, { useState } from "react";
 import  { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, NavLink } from "react-router-dom";
 import { login } from "../../store/session";
+import './login.css';
+import mango from '../../store/mango-logo.png';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.session.user);
   const [errors, setErrors] = useState([]);
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const onLogin = async (e) => {
     e.preventDefault();
-    const data = await dispatch(login(email, password));
+    const data = await dispatch(login(username, password));
     if (data.errors) {
       setErrors(data.errors);
     }
   };
 
-  const updateEmail = (e) => {
-    setEmail(e.target.value);
+  const updateUsername = (e) => {
+    setUsername(e.target.value);
   };
 
   const updatePassword = (e) => {
@@ -31,34 +33,44 @@ const LoginForm = () => {
   }
 
   return (
-    <form onSubmit={onLogin}>
+    <main>
       <div>
-        {errors.map((error) => (
-          <div>{error}</div>
-        ))}
+        <img className='logo' src={mango}></img>
+        <h1 className='music'>Music</h1>
       </div>
-      <div>
-        <label htmlFor="email">Email</label>
-        <input
-          name="email"
-          type="text"
-          placeholder="Email"
-          value={email}
-          onChange={updateEmail}
-        />
+      <div className='login_contain'>
+        <div className='title'>Welcome Back!</div>
+        <form onSubmit={onLogin}>
+          <div>
+            {errors.map((error) => (
+              <div>{error}</div>
+            ))}
+          </div>
+          <div>
+            <input
+              name="username"
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={updateUsername}
+            />
+          </div>
+          <div>
+            <input
+              name="password"
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={updatePassword}
+            />
+          </div>
+            <button className='login' type="submit">Login</button>
+        </form>
+        <div className="not">
+          <p>Not a Mango Music member? <NavLink to='/sign-up'>Sign up here</NavLink></p>
+        </div>
       </div>
-      <div>
-        <label htmlFor="password">Password</label>
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={updatePassword}
-        />
-        <button type="submit">Login</button>
-      </div>
-    </form>
+    </main>
   );
 };
 
