@@ -9,6 +9,10 @@ import UsersList from "./components/UsersList";
 import User from "./components/User";
 // import { authenticate } from "./services/auth";
 import { authenticate } from "./store/session";
+import Home from "./components/Home/Home"
+import Albums from "./components/Albums/Albums"
+import Artists from "./components/Artists/Artists"
+import Songs from "./components/Songs/Songs"
 
 function App() {
   // const [authenticated, setAuthenticated] = useState(false);
@@ -35,6 +39,18 @@ function App() {
         <Route path="/sign-up" exact={true}>
           <SignUpForm />
         </Route>
+        <ProtectedRoute path="/home" exact={true} >
+          <Home />
+        </ProtectedRoute>
+        <ProtectedRoute path="/albums" exact={true} >
+          <Albums />
+        </ProtectedRoute>
+        <ProtectedRoute path="/artists" exact={true} >
+          <Artists />
+        </ProtectedRoute>
+        <ProtectedRoute path="/songs" exact={true} >
+          <Songs />
+        </ProtectedRoute>
       <NavBar />
         <ProtectedRoute path="/users" exact={true} >
           <UsersList/>
