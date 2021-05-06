@@ -2,6 +2,7 @@ from .db import db
 from .user import User
 from .artist import Artist
 from .album import Album
+# from .playlist import Playlist
 
 
 class Song(db.Model):
@@ -16,14 +17,17 @@ class Song(db.Model):
     length = db.Column(db.Date, nullable=False)
     releaseDate = db.Column(db.Date, nullable=False)
 
+    # albums = db.relationship("Album", back_populates="songs")
+    # playlists = db.relationship("Playlist", back_populates="songs")
+
     def to_dict(self):
         return {
             "id": self.id,
             "name": self.name,
             "songItself": self.songItself,
-            "user": self.user.to_dict(),
-            # "artistId": self.,
-            # "albumId": self.bio,
+            "userId": self.userId,
+            "artistId": self.artistId,
+            "albumId": self.albumId,
             "length": self.length,
             "releaseDate": self.releaseDate,
         }

@@ -1,5 +1,6 @@
 from .db import db
 from .user import User
+# from .song import Song
 
 
 class Playlist(db.Model):
@@ -9,11 +10,14 @@ class Playlist(db.Model):
     name = db.Column(db.String, nullable=False)
     userId = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=True)
     order = db.Column(db.Integer, nullable=True)
+    imageUrl = db.Column(db.String())
+    # songs = db.relationship("Song", back_populates='playlists')
 
     def to_dict(self):
         return {
             "id": self.id,
             "name": self.name,
-            "user": self.user.to_dict(),
-            "order": self.order
+            "userId": self.userId,
+            "order": self.order,
+            "imageUrl": self.imageUrl
         }

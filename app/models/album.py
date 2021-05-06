@@ -1,6 +1,8 @@
 from .db import db
 from .user import User
 from .artist import Artist
+# from .song import Song
+
 
 class Album(db.Model):
     __tablename__ = 'albums'
@@ -11,13 +13,18 @@ class Album(db.Model):
     artistId = db.Column(db.Integer, db.ForeignKey('artists.id'), nullable=False)
     releaseDate = db.Column(db.Date, nullable=False)
     order = db.Column(db.Integer, nullable=True)
+    imageUrl = db.Column(db.String, nullable=True)
+
+    # artists = db.relationship("Artist", back_populates="albums")
+    # songs = db.relationship("Song", back_populates="albums")
 
     def to_dict(self):
         return {
             "id": self.id,
             "name": self.name,
-            "user": self.user.to_dict(),
-            # "artistId": self.,
+            "userId": self.userId,
+            "artistId": self.artistId,
             "releaseDate": self.releaseDate,
-            "order": self.order
+            "order": self.order,
+            "imageUrl": self.imageUrl
         }
