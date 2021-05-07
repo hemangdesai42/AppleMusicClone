@@ -13,6 +13,7 @@ import Home from "./components/Home/Home"
 import Albums from "./components/Albums/Albums"
 import Artists from "./components/Artists/Artists"
 import Songs from "./components/Songs/Songs"
+import Playlists from "./components/Playlists/Playlists"
 
 function App() {
   // const [authenticated, setAuthenticated] = useState(false);
@@ -40,18 +41,25 @@ function App() {
           <SignUpForm />
         </Route>
         <ProtectedRoute path="/home" exact={true} >
+          <NavBar />
           <Home />
         </ProtectedRoute>
         <ProtectedRoute path="/albums" exact={true} >
+          <NavBar />
           <Albums />
         </ProtectedRoute>
         <ProtectedRoute path="/artists" exact={true} >
+          <NavBar />
           <Artists />
         </ProtectedRoute>
         <ProtectedRoute path="/songs" exact={true} >
+          <NavBar />
           <Songs />
         </ProtectedRoute>
-      <NavBar />
+        <ProtectedRoute path="/playlists" exact={true} >
+          <NavBar />
+          <Playlists />
+        </ProtectedRoute>
         <ProtectedRoute path="/users" exact={true} >
           <UsersList/>
         </ProtectedRoute>

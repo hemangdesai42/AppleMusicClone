@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom'
 import { homeData } from '../../store/home'
+import './home.css'
 
 function Home() {
     const dispatch = useDispatch();
@@ -18,11 +19,11 @@ function Home() {
     }, [dispatch]);
     
     return (
-        <div>
+        <div className='albums_container'>
             {albumsData ? albumsData.map((album) => {
                 return (
                     <div>
-                        <h1>{album['name']}</h1>
+                        <div>{album['name']}</div>
                     </div>
                     ) 
                 }) : null}

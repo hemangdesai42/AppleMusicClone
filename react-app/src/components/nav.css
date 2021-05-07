@@ -1,5 +1,77 @@
-.library {
+.body {
+    background-color: #2e2e2e;
+    width: 230px;
+    
+}
+
+.navbar {
+    display: flex;
+    width: 230px;
+    height: 900px;
+    background-color: #2e2e2e;
     position: absolute;
-    top: 50%;
-    padding: 30px 30px;
+    top: 0;
+    left: 0;
+}
+
+.music {
+    margin-left: 60px;
+    top: -0%;
+}
+
+.library {
+    display: block;
+    margin-top: 11rem;
+    margin-bottom: 1rem;
+    color: white;
+    margin-left: 20px;
+    font-size: 20;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  
+}
+
+.library > div {
+    margin: 2rem 0rem 1rem 0rem;
+    text-decoration: none;
+    
+}
+
+.library > div > a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    margin-left: 10px;
+
+}
+
+
+.playlist {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    margin-left: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.playlist > div {
+    margin: 2rem 0rem 1rem 0rem;
+    text-decoration: none;
+    
+}
+
+.playlist > div > a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    margin-left: 10px;
+
+
+}
+
+.logout {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
 }

@@ -5,13 +5,16 @@ import home from './home'
 import album from './album'
 import artist from './artist'
 import song from './song'
+import playlist from './playlist'
+
 
 const rootReducer = combineReducers({
     session,
     home,
     album,
     artist,
-    song
+    song,
+    playlist
 });
 
 let enhancer;

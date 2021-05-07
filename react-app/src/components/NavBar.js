@@ -6,20 +6,44 @@ import mango from '../store/mango-logo.png'
 
 const NavBar = () => {
   return (
-    <nav>
-      <div>
+    <div className="nav">
+      <div className='navbar'>
         <img className='logo' src={mango}></img>
         <h1 className='music'>Music</h1>
-        <div className='library'>Library
+        <div className='navigation_container'>
+          <div className='library'>Library
+            <br></br>
+            <div className='albums'><a href='/albums'><svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="orange" class="bi bi-stack" viewBox="0 0 16 16">
+              <path d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z" />
+              <path d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z" />
+            </svg> Albums</a></div>
+            <br></br>
+            <div className='artists'><a href='/artists'><svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="orange" class="bi bi-file-person" viewBox="0 0 16 16">
+              <path d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
+              <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+            </svg> Artists</a></div>
+            <br></br>
+            <div className='songs'><a href='/songs'><svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="orange" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+              <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
+              <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />
+              <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z" />
+            </svg> Songs</a></div>
+            <br></br>
+          </div>
+          <div className='playlist'>Playlists
           <br></br>
-          <NavLink to='/albums' className='albums'>Albums</NavLink>
+            <div className='playlists'><a href='/playlists'><svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="orange" class="bi bi-music-note-list" viewBox="0 0 16 16">
+              <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z" />
+              <path fill-rule="evenodd" d="M12 3v10h-1V3h1z" />
+              <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z" />
+              <path fill-rule="evenodd" d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z" />
+            </svg> Playlists</a></div>
+          </div>
           <br></br>
-          <NavLink to='/artists' className='artists'>Artists</NavLink>
-          <br></br>
-          <NavLink to='/songs' className='songs'>Songs</NavLink>
+          <div className='logout'><LogoutButton /></div>
         </div>
       </div>
-    </nav>
+    </div>
   );
 }
 
