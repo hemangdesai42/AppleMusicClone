@@ -11,15 +11,14 @@ const NavBar = () => {
         <img className='logo' src={mango}></img>
         <h1 className='music'>Music</h1>
         <div className='library'>Library
-        <br></br>
-        <NavLink to='/albums'>Albums</NavLink>
-        <br></br>
-        <NavLink to='/artists'>Artists</NavLink>
-        <br></br>
-        <NavLink to='/songs'>Songs</NavLink>
+          <br></br>
+          <NavLink to='/albums' className='albums'>Albums</NavLink>
+          <br></br>
+          <NavLink to='/artists' className='artists'>Artists</NavLink>
+          <br></br>
+          <NavLink to='/songs' className='songs'>Songs</NavLink>
         </div>
       </div>
-      
     </nav>
   );
 }
