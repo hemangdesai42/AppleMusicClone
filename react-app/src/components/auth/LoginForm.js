@@ -34,12 +34,8 @@ const LoginForm = () => {
 
   return (
     <main>
-      <div>
-        <img className='logo' src={mango}></img>
-        <h1 className='music'>Music</h1>
-      </div>
       <div className='login_contain'>
-        <div className='title'>Welcome Back!</div>
+        <div className='title'>Login to Mango Music!</div>
         <form onSubmit={onLogin}>
           <div>
             {errors.map((error) => (

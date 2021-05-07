@@ -47,10 +47,6 @@ const SignUpForm = () => {
 
   return (
     <main>
-      <div>
-        <img className='logo' src={mango}></img>
-        <h1 className='music'>Music</h1>
-      </div>
       <div className='form_container'>
         <div className='title'>Sign Up for Mango Music!</div>
       <form onSubmit={onSignUp}>
