@@ -3,7 +3,7 @@ import  { useDispatch, useSelector } from "react-redux";
 import { Redirect, NavLink } from "react-router-dom";
 import { login } from "../../store/session";
 import './login.css';
-import mango from '../../store/mango-logo.png';
+// import mango from '../../store/mango-logo.png';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -36,6 +36,7 @@ const LoginForm = () => {
     <main>
       <div className='login_contain'>
         <div className='title'>Login to Mango Music!</div>
+        <div className='form'>
         <form onSubmit={onLogin}>
           <div>
             {errors.map((error) => (
@@ -62,6 +63,7 @@ const LoginForm = () => {
           </div>
             <button className='login' type="submit">Login</button>
         </form>
+        </div>
         <div className="not">
           <p>Not a Mango Music member? <NavLink to='/sign-up'>Sign up here</NavLink></p>
         </div>

@@ -14,8 +14,9 @@ class Song(db.Model):
     userId = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=True)
     artistId = db.Column(db.Integer, db.ForeignKey('artists.id'), nullable=False)
     albumId = db.Column(db.Integer, db.ForeignKey('albums.id'), nullable=True)
-    length = db.Column(db.Date, nullable=False)
     releaseDate = db.Column(db.Date, nullable=False)
+    songLength = db.Column(db.String, nullable=True)
+
 
     # albums = db.relationship("Album", back_populates="songs")
     # playlists = db.relationship("Playlist", back_populates="songs")
@@ -28,6 +29,6 @@ class Song(db.Model):
             "userId": self.userId,
             "artistId": self.artistId,
             "albumId": self.albumId,
-            "length": self.length,
             "releaseDate": self.releaseDate,
+            "songLength": self.songLength,
         }

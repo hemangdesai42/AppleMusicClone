@@ -22,7 +22,7 @@ body{
 }
 
 .form_container {
-    background-color: rgb(88, 87, 87);
+    background-color: rgb(59, 59, 59);
     position: absolute;
     top: 50%;
     left: 60%;
@@ -72,7 +72,9 @@ input[type="password"] {
     width: 10rem;
     height: 2rem;
     margin-top: 1rem;
+    color: #cf6b28;
     border: 1px solid #cf6b28;
+    background-color: #2e2e2e;
     border-radius: 4px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;

@@ -24,6 +24,7 @@ function Home() {
                 return (
                     <div>
                         <div>{album['name']}</div>
+                        <img className='coverart' src={album['imageUrl']}></img>
                     </div>
                     ) 
                 }) : null}

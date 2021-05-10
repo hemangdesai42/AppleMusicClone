@@ -21,8 +21,8 @@ const intialState = {
         userId: '',
         artistId: '',
         albumId: '',
-        length: '',
         releaseDate: '',
+        songLength: '',
     },
 }
 

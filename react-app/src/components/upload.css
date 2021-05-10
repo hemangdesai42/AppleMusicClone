@@ -1,0 +1,10 @@
+.uploadForms {
+    background-color: rgb(59, 59, 59);
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding: 8rem 10rem 8rem 10rem;
+    display: block;
+}

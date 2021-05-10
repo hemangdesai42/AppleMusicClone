@@ -14,6 +14,8 @@ import Albums from "./components/Albums/Albums"
 import Artists from "./components/Artists/Artists"
 import Songs from "./components/Songs/Songs"
 import Playlists from "./components/Playlists/Playlists"
+import UploadMusic from "./components/Upload";
+
 
 function App() {
   // const [authenticated, setAuthenticated] = useState(false);
@@ -61,6 +63,10 @@ function App() {
         <ProtectedRoute path="/playlists" exact={true} >
           <NavBar />
           <Playlists />
+        </ProtectedRoute>
+        <ProtectedRoute path='/upload' exact={true}>
+          <NavBar />
+          <UploadMusic />
         </ProtectedRoute>
         <ProtectedRoute path="/users" exact={true} >
           <UsersList/>

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect, NavLink } from 'react-router-dom';
 import { signUp } from '../../store/session';
 import './signup.css';
-import mango from '../../store/mango-logo.png';
+// import mango from '../../store/mango-logo.png';
 
 const SignUpForm = () => {
   const dispatch = useDispatch();
