@@ -7,4 +7,43 @@
     transform: translate(-50%, -50%);
     padding: 8rem 10rem 8rem 10rem;
     display: block;
+    min-width: 100px;
+    margin: auto;
+}
+
+.song {
+    /* background-color : #cf6b28;  */
+    border: 1px solid #cf6b28;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    width: 15rem;
+    height: 2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white
+}
+
+textarea[type="text"] {
+    background-color : #cf6b28; 
+    border: 1px solid #cf6b28;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    width: 15rem;
+    height: 2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white
+
+}
+
+.submit {
+    position: relative;
+    left: 22%;
+    width: 10rem;
+    height: 2rem;
+    margin-top: 1rem;
+    color: #cf6b28;
+    border: 1px solid #cf6b28;
+    background-color: #2e2e2e;
+    border-radius: 4px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
 }

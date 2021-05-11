@@ -49,7 +49,9 @@ const UploadMusic = () => {
                 <div className='upload'>
                     <form className='uploadForms' onSubmit={handleSubmit}>
                         <div>
+                        <div className='title'>Upload Music!</div>
                         <input
+                        className='song'
                             type="file"
                             accept="song/*"
                             onChange={updateSong}
@@ -57,6 +59,7 @@ const UploadMusic = () => {
                         <br></br>
                         <div>
                         <textarea
+                            className='artistArea'
                             type='text'
                             placeholder='Artist'
                             value={artist}
@@ -64,13 +67,14 @@ const UploadMusic = () => {
                         /></div>
                         <br></br>
                         <div><textarea
+                            className='albumArea'
                             type='text'
                             placeholder='Album'
                             value={album}
                             onChange={(e) => setAlbum(e.target.value)}
                         /></div>
                         <br></br>
-                        <button type="submit">Submit</button>
+                        <button className='submit' type="submit">Submit</button>
                         {(songLoading) && <p>Loading...</p>}
                     </form>
                 </div>
