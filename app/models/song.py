@@ -12,9 +12,9 @@ class Song(db.Model):
     name = db.Column(db.String, nullable=False)
     songItself = db.Column(db.String, nullable=False, unique=True)
     userId = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=True)
-    artistId = db.Column(db.Integer, db.ForeignKey('artists.id'), nullable=False)
+    artistId = db.Column(db.Integer, db.ForeignKey('artists.id'), nullable=True)
     albumId = db.Column(db.Integer, db.ForeignKey('albums.id'), nullable=True)
-    releaseDate = db.Column(db.Date, nullable=False)
+    releaseDate = db.Column(db.Date, nullable=True)
     songLength = db.Column(db.String, nullable=True)
 
 

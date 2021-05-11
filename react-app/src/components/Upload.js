@@ -4,19 +4,22 @@ import './upload.css'
 
 const UploadMusic = () => {
     const history = useHistory(); // so that we can redirect after the image upload is successful
-    const [song, setSong] = useState(null);
+    const [songItself, setSongItself] = useState(null);
     const [songLoading, setSongLoading] = useState(false);
-    const [artist, setArtist] = useState('')
-    const [album, setAlbum] = useState('')
-
+    const [name, setName] = useState('')
+    const [artistName, setArtistName] = useState('')
+    const [albumName, setAlbumName] = useState('')
+    const [albumImage, setAlbumImage] = useState(null)
 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append("song", song);
-        formData.append("artist", artist);
-        formData.append("album", album);
+        formData.append("songItself", songItself);
+        formData.append("name", name);
+        // formData.append("artistName", artistName);
+        // formData.append("albumName", albumName);
+        // formData.append("albumImage", albumImage);
         // aws uploads can be a bit slow—displaying
         // some sort of loading message is a good idea
         setSongLoading(true);
@@ -28,7 +31,7 @@ const UploadMusic = () => {
         if (res.ok) {
             await res.json();
             setSongLoading(false);
-            history.push("/");
+            history.push("/home");
         }
         else {
             setSongLoading(false);
@@ -40,7 +43,12 @@ const UploadMusic = () => {
 
     const updateSong = (e) => {
         const file = e.target.files[0];
-        setSong(file);
+        setSongItself(file);
+    }
+
+    const updateImage = (e) => {
+        const file = e.target.files[0];
+        setAlbumImage(file);
     }
 
     return (
@@ -48,34 +56,49 @@ const UploadMusic = () => {
             <div className='page'>
                 <div className='upload'>
                     <form className='uploadForms' onSubmit={handleSubmit}>
-                        <div>
-                        <div className='title'>Upload Music!</div>
-                        <input
-                        className='song'
+                        <div className='title'>Upload a Song!</div>
+                        <div className='inputs'>
+                        <div><input
+                            className='song'
                             type="file"
                             accept="song/*"
                             onChange={updateSong}
                         /></div>
                         <br></br>
                         <div>
-                        <textarea
+                        <input
+                            className='songName'
+                            type='text'
+                            placeholder='Name'
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        /></div>
+                        <br></br>
+                        {/* <div><input
                             className='artistArea'
                             type='text'
-                            placeholder='Artist'
-                            value={artist}
-                            onChange={(e) => setArtist(e.target.value)}
+                            placeholder='Artist Name'
+                            value={artistName}
+                            onChange={(e) => setArtistName(e.target.value)}
                         /></div>
                         <br></br>
-                        <div><textarea
+                        <div><input
                             className='albumArea'
                             type='text'
-                            placeholder='Album'
-                            value={album}
-                            onChange={(e) => setAlbum(e.target.value)}
+                            placeholder='Album Title'
+                            value={albumName}
+                            onChange={(e) => setAlbumName(e.target.value)}
                         /></div>
                         <br></br>
+                        <div><input
+                            className='albumImage'
+                            type="file"
+                            accept="image/*"
+                            onChange={updateImage}
+                        /></div> */}
                         <button className='submit' type="submit">Submit</button>
                         {(songLoading) && <p>Loading...</p>}
+                        </div>
                     </form>
                 </div>
             </div>
