@@ -3,7 +3,7 @@ import { useDispatch} from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
@@ -14,7 +14,8 @@ import Albums from "./components/Albums/Albums"
 import Artists from "./components/Artists/Artists"
 import Songs from "./components/Songs/Songs"
 import Playlists from "./components/Playlists/Playlists"
-import UploadMusic from "./components/Upload";
+import UploadMusic from "./components/Upload/Upload";
+import Player from "./components/Player/Player"
 
 
 function App() {
@@ -46,26 +47,32 @@ function App() {
         </Route>
         <ProtectedRoute path="/home" exact={true} >
           <NavBar />
+          <Player />
           <Home />
         </ProtectedRoute>
         <ProtectedRoute path="/albums" exact={true} >
           <NavBar />
+          <Player />
           <Albums />
         </ProtectedRoute>
         <ProtectedRoute path="/artists" exact={true} >
           <NavBar />
+          <Player />
           <Artists />
         </ProtectedRoute>
         <ProtectedRoute path="/songs" exact={true} >
           <NavBar />
+          <Player />
           <Songs />
         </ProtectedRoute>
         <ProtectedRoute path="/playlists" exact={true} >
           <NavBar />
+          <Player />
           <Playlists />
         </ProtectedRoute>
         <ProtectedRoute path='/upload' exact={true}>
           <NavBar />
+          <Player />
           <UploadMusic />
         </ProtectedRoute>
         <ProtectedRoute path="/users" exact={true} >

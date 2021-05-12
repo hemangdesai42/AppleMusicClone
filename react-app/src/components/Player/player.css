@@ -1,0 +1,13 @@
+.media_player {
+    position: absolute;
+    top: 2%;
+    left: 62%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 70rem;
+    border: 1px solid #cf6b28
+}
+
+.controls {
+    color: #cf6b28;
+}

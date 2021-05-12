@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import LogoutButton from './auth/LogoutButton';
+import LogoutButton from '../auth/LogoutButton';
 import './nav.css'
-import mango from '../store/mango-logo.png'
+import mango from '../../store/mango-logo.png'
 
 const NavBar = () => {
   return (
