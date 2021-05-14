@@ -23,15 +23,19 @@ const intialState = {
         order: '',
         imageUrl: '',
     },
+    artistDict: {
+        id: '',
+        name: '',
+        bio: '',
+        imageUrl: '',
+        userId: '',
+    },
     // songDict: {
         
     // },
     // playlistDict: {
 
     // },
-    // artistDict: {
-
-    // }
 }
 
 export default function homeReducer(state = intialState, action) {

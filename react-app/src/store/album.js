@@ -19,8 +19,6 @@ const intialState = {
         name: '',
         userId: '',
         artistId: '',
-        releaseDate: '',
-        order: '',
         imageUrl: '',
     },
 }

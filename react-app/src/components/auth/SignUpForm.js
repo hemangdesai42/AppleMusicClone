@@ -50,7 +50,7 @@ const SignUpForm = () => {
       <div className='form_container'>
         <div className='title'>Sign Up for Mango Music!</div>
       <form onSubmit={onSignUp}>
-        <div className='name'>
+        <div className='name_signup'>
           <input
             type="text"
             name="name"

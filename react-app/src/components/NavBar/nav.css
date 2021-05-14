@@ -9,7 +9,7 @@
     width: 230px;
     height: 1000px;
     background-color: #2e2e2e;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
 }
@@ -71,8 +71,8 @@
 }
 
 .logout {
-    position: absolute;
+    position: fixed;
     bottom: 10%;
-    left: 10%;
+    left: 3%;
 
 }

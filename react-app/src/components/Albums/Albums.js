@@ -5,19 +5,30 @@ import { albumsData } from '../../store/album'
 
 function Albums() {
     const dispatch = useDispatch();
-    let { username } = useParams();
-    const data = useSelector(state => state.albums)
-
+    const data = useSelector(state => state.albumsReducer)
+    const albums = data.albums
+    console.log(albums)
 
     useEffect(() => {
         (async () => {
-            await dispatch(albumsData())
+            await dispatch(albumsData(data))
         })();
     }, [dispatch]);
+    
+    
 
     return (
-        <div>
-            <h1>hello</h1>
+        <div className='albums_container'>
+            <h1 className='title_library'>Recently Added</h1>
+            <div className='line_library'>_________________________________________________________________________________________________________________</div>
+            {albums ? albums.map((album) => {
+                return (
+                    <div className='home_items'>
+                        <div><img className='coverart' src={album['imageUrl']}></img></div>
+                        <div className='name'>{album['name']}</div>
+                    </div>
+                )
+            }) : null}
         </div>
     )
 

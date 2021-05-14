@@ -1,11 +1,11 @@
 .media_player {
-    position: absolute;
+    position: fixed;
     top: 2%;
-    left: 62%;
+    left: 60%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    width: 70rem;
-    border: 1px solid #cf6b28
+    /* width: 70rem; */
+    /* border: 1px solid #cf6b28 */
 }
 
 .controls {

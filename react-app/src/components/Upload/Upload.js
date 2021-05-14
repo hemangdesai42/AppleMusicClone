@@ -17,9 +17,9 @@ const UploadMusic = () => {
         const formData = new FormData();
         formData.append("songItself", songItself);
         formData.append("name", name);
-        // formData.append("artistName", artistName);
-        // formData.append("albumName", albumName);
-        // formData.append("albumImage", albumImage);
+        formData.append("artistName", artistName);
+        formData.append("albumName", albumName);
+        formData.append("albumImage", albumImage);
         // aws uploads can be a bit slow—displaying
         // some sort of loading message is a good idea
         setSongLoading(true);
@@ -74,7 +74,7 @@ const UploadMusic = () => {
                             onChange={(e) => setName(e.target.value)}
                         /></div>
                         <br></br>
-                        {/* <div><input
+                        <div><input
                             className='artistArea'
                             type='text'
                             placeholder='Artist Name'
@@ -95,7 +95,7 @@ const UploadMusic = () => {
                             type="file"
                             accept="image/*"
                             onChange={updateImage}
-                        /></div> */}
+                        /></div>
                         <button className='submit' type="submit">Submit</button>
                         {(songLoading) && <p>Loading...</p>}
                         </div>

@@ -11,8 +11,9 @@ class Artist(db.Model):
     name = db.Column(db.String, nullable=False)
     bio = db.Column(db.String, nullable=True)
     imageUrl = db.Column(db.String, nullable=True)
-    # albums = db.relationship("Album", back_populates="artists")
-
+    
+    album = db.relationship("Album", back_populates="artists")
+    songs = db.relationship("Song", back_populates="artists")
     def to_dict(self):
         return {
             "id": self.id,

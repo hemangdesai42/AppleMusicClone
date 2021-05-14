@@ -9,9 +9,11 @@ home_routes = Blueprint('home', __name__)
 @login_required
 def home_page():
     albums = Album.query.all()
+    artists = Artist.query.all()
     playlists = Playlist.query.all()
 
 
     return {"albums": [album.to_dict() for album in albums],
+            "artists": [artist.to_dict() for artist in artists]
             # "playlists": [playlist.to_dict() for playlist in playlists],
             }

@@ -8,23 +8,33 @@ function Home() {
     const dispatch = useDispatch();
     const data = useSelector(state => state.home)
     const albumsData = data.albums
-    
+    const artistsData = data.artists
     console.log(data)
-    console.log(albumsData ? albumsData[0] : null)
-    
+    // console.log(albumsData ? albumsData[0] : null)
+    console.log(data ? data['albums'] : null)
+
     useEffect(() => {
         (async () => {
             await dispatch(homeData())
         })();
     }, [dispatch]);
-    
+
+    // function artists(artistsData) {
+    //         artistsData ? artistsData.map((artist) => {
+    //             return (artist)
+    //         }) : null
+    // }
+  
     return (
         <div className='albums_container'>
+            <h1 className='title_library'>Recently Added</h1>
+            <div className='line_library'>_________________________________________________________________________________________________________________</div>
             {albumsData ? albumsData.map((album) => {
                 return (
-                    <div>
-                        <div>{album['name']}</div>
-                        <img className='coverart' src={album['imageUrl']}></img>
+                    <div className='home_items'>
+                        <div><img className='coverart' src={album['imageUrl']}></img></div>
+                        <div className='name'>{album['name']}</div>
+                        
                     </div>
                     ) 
                 }) : null}
