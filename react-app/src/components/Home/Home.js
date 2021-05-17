@@ -32,7 +32,7 @@ function Home() {
             {albumsData ? albumsData.map((album) => {
                 return (
                     <div className='home_items'>
-                        <div><img className='coverart' src={album['imageUrl']}></img></div>
+                        <NavLink to={`/albums/${album['id']}`}><img className='coverart' src={album['imageUrl']}></img></NavLink>
                         <div className='name'>{album['name']}</div>
                         
                     </div>

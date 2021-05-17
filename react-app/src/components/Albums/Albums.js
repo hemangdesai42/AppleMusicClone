@@ -19,12 +19,12 @@ function Albums() {
 
     return (
         <div className='albums_container'>
-            <h1 className='title_library'>Recently Added</h1>
-            <div className='line_library'>_________________________________________________________________________________________________________________</div>
+            <h1 className='album_library'>Recently Added</h1>
+            <div className='albumline_library'>_________________________________________________________________________________________________________________</div>
             {albums ? albums.map((album) => {
                 return (
                     <div className='home_items'>
-                        <div><img className='coverart' src={album['imageUrl']}></img></div>
+                        <NavLink to={`/albums/${album['id']}`}><img className='coverart' src={album['imageUrl']}></img></NavLink>
                         <div className='name'>{album['name']}</div>
                     </div>
                 )

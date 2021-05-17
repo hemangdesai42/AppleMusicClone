@@ -12,13 +12,13 @@ function Album() {
         (async () => {
             await dispatch(albumData(id))
         })();
-    }, [dispatch]);
+    }, [dispatch, id]);
 
 
 
     return (
         <div className='album_container'>
-            <h1>hello</h1>
+            <h1>dfgh</h1>
         </div>
     )
 

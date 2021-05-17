@@ -43,14 +43,14 @@ def upload_song():
     if artist:
         song_artist = artist
     else:
-        song_artist = Artist(name=artistName)
+        song_artist = Artist(name=artistName, userId=current_user.id)
         db.session.add(song_artist)
 
     album = Album.query.filter_by(name=albumName).first()
     if album:
         song_album = album
     else:
-        song_album = Album(name=albumName, imageUrl=urlImage, artists=song_artist)
+        song_album = Album(name=albumName, imageUrl=urlImage, artists=song_artist, userId=current_user.id)
         db.session.add(song_album)
 
     # new_album = Album(name=albumName, imageUrl=urlImage, artists=song_artist)

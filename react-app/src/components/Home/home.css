@@ -3,36 +3,44 @@
     color: white;
     position: absolute;
     left: 4%;
-    top: -15%;
+    top: -2%;
+    margin-bottom: 25%;
 }
 
 .line_library {
     color: white;
     position: absolute;
     left: 3%;
-    top: -2%;
+    top: 5%;
     color: #cf6b28;
 }
-/* 
+
 .home_items {
-    border-top: 1px solid white;
-} */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+    margin-top: 1rem;
+
+}
 
 .albums_container {
     display: flex;
     position: fixed;
-    margin-top: 10rem;
+    margin-top: 8rem;
     margin-left: 15rem;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
 }
 
 .coverart {
     width: 400px;
     height: 400px;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 4rem 2rem 2rem 2rem;
 }
 
 .name {

@@ -10,6 +10,7 @@ export const albumsData = () => async (dispatch) => {
     const data = await res.json();
     if (res.ok) {
         await dispatch(getAlbums(data))
+        
     }
 }
 
