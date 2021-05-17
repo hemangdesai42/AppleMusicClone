@@ -28,8 +28,8 @@ function Home() {
     return (
         <div className='albums_container'>
             <h1 className='title_library'>Recently Added</h1>
-            <div className='line_library'>_________________________________________________________________________________________________________________</div>
-            {albumsData ? albumsData.map((album) => {
+            <div className='line_library'>_________________________________________________________________________________________________________________________________</div>
+            {albumsData ? albumsData.slice(0).reverse().map((album) => {
                 return (
                     <div className='home_items'>
                         <NavLink to={`/albums/${album['id']}`}><img className='coverart' src={album['imageUrl']}></img></NavLink>

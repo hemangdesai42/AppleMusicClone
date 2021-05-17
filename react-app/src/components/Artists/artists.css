@@ -1,5 +1,5 @@
 
-.title_library {
+.artists_title {
     color: white;
     position: absolute;
     left: 4%;
@@ -7,7 +7,7 @@
     margin-bottom: 25%;
 }
 
-.line_library {
+.line {
     color: white;
     position: absolute;
     left: 3%;
@@ -15,17 +15,16 @@
     color: #cf6b28;
 }
 
-.home_items {
+.artist_items {
     overflow-x: hidden;
     overflow-y: scroll;
     height: 100%;
     margin-top: 1rem;
     margin-bottom: -350px;
 
-
 }
 
-.albums_container {
+.artists_container {
     display: flex;
     position: fixed;
     margin-top: 8rem;
@@ -39,17 +38,17 @@
     height: 100%;
 }
 
-.coverart {
+.artist_img {
     width: 400px;
     height: 400px;
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 4rem 2rem 2rem 4rem;
 }
 
-.name {
+.artist_name {
     font-size: 25px;
     position: absolute;
     color: white;
-    margin-left: 2.5rem;
+    margin-left: 4rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-top: -1.5rem;
 }

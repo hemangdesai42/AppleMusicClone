@@ -1,7 +1,53 @@
-.song_container {
+.body, .html {
+    max-width: 784px;
+    max-height: 921px
+}
+
+.title_song {
+    color: white;
     position: absolute;
-    top: 50%;
-    left: 60%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    left: 22%;
+    top: 14%;
+    margin-bottom: 25%;
+}
+
+.line_song {
+    color: white;
+    position: absolute;
+    left: 22%;
+    top: 20%;
+    color: #cf6b28;
+}
+
+
+.songs_container {
+    display: inline-block;
+    /* position: fixed; */
+    margin-top: 14rem;
+    margin-left: 13rem;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.song_items {
+    display: inline;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+    margin-top: 1rem;
+}
+
+.song_name {
+    font-size: 25px;
+    position: absolute;
+    /* border: 1px solid #cf6b28; */
+    color: white;
+    margin-left: 4rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: -1.5rem;
 }

@@ -17,19 +17,19 @@ function Songs() {
     }, [dispatch]);
 
     return (
-        <main>
         <div className='songs_container'>
-            <h1 className='title_song'>Recently Added</h1>
+            <h1 className='title_song'>My Songs</h1>
             <div className='line_song'>_________________________________________________________________________________________________________________</div>
-            {songs ? songs.map((song) => {
+            {songs ? songs.sort((a, b) => a.timeM > b.timeM ? 1 : -1).map((song) => {
                 return (
-                    <div className='song_container'>
-                    <div className='song_name'>{song['name']}</div>
+                    <div className='song_items'>
+                        <div className='song_name'>{song['name']}</div>
+                        <br></br>
+                        <br></br>
                     </div>
                 )
             }) : null}
         </div>
-        </main>
     )
 
 }
