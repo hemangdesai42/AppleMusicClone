@@ -20,7 +20,7 @@
     overflow-y: scroll;
     height: 100%;
     margin-top: 1rem;
-    margin-bottom: -350px;
+    margin-bottom: -420px;
 
 
 }
@@ -49,7 +49,7 @@
     font-size: 25px;
     position: absolute;
     color: white;
-    margin-left: 2.5rem;
+    margin-left: 1rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-top: -1.5rem;
 }

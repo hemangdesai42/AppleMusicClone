@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { useParams } from 'react-router-dom'
+import { useDispatch, useSelector } from "react-redux";
+import { songsData } from '../../store/song'
 import './player.css'
 
 const Player = () => {

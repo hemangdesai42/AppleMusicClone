@@ -1,0 +1,13 @@
+.album_container {
+    display: flex;
+    position: fixed;
+    margin-top: 8rem;
+    margin-left: 15rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+}

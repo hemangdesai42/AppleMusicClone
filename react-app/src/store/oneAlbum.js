@@ -22,6 +22,17 @@ const intialState = {
         artistId: '',
         imageUrl: '',
     },
+    songDict: {
+        id: '',
+        name: '',
+        songItself: '',
+        userId: '',
+        artistId: '',
+        albumId: '',
+        releaseDate: '',
+        songLength: '',
+    
+}
 }
 
 export default function albumReducer(state = intialState, action) {

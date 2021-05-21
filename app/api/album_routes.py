@@ -1,7 +1,6 @@
 from flask import Blueprint, request
 from app.models import db, User, Album, Song
 from flask_login import current_user, login_required
-from sqlalchemy.orm import joinedload
 
 album_routes = Blueprint('albums', __name__)
 
@@ -19,5 +18,6 @@ def albums_page():
 @login_required
 def get_album(id):
     album = Album.query.get(id)
+    songs = Song.query.filter_by(albumId=id)
 
-    return {"album": album.to_dict()}
+    return {"album": album.to_dict(), "songs": [song.to_dict() for song in songs]}
