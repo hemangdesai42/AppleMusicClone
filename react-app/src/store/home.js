@@ -30,9 +30,16 @@ const intialState = {
         imageUrl: '',
         userId: '',
     },
-    // songDict: {
-        
-    // },
+    songDict: {
+        id: '',
+        name: '',
+        songItself: '',
+        userId: '',
+        artistId: '',
+        albumId: '',
+        releaseDate: '',
+        songLength: '',
+    },
     // playlistDict: {
 
     // },

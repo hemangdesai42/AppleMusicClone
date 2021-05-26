@@ -11,9 +11,11 @@ def home_page():
     albums = Album.query.all()
     artists = Artist.query.all()
     playlists = Playlist.query.all()
+    songs = Song.query.filter_by(userId=current_user.id)
 
 
     return {"albums": [album.to_dict() for album in albums],
-            "artists": [artist.to_dict() for artist in artists]
+            "artists": [artist.to_dict() for artist in artists],
+            "songs": [song.to_dict() for song in songs]
             # "playlists": [playlist.to_dict() for playlist in playlists],
             }

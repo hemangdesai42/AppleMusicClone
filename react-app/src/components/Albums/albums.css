@@ -1,5 +1,5 @@
 .body, .html {
-    max-width: 784px;
+    max-width: 100vw;
     max-height: 921px
 }
 
@@ -20,13 +20,9 @@
 }
 
 .album_items {
-    overflow-x: hidden;
-    overflow-y: scroll;
     height: 100%;
     margin-top: 1rem;
     margin-bottom: -420px;
-
-
 }
 
 .albums_container {
@@ -38,9 +34,13 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
     overflow-y: scroll;
-    height: 100%;
+    max-width: 1004px;
+    min-height: 921px;
+}
+
+.albums_container::-webkit-scrollbar {
+  display: none;
 }
 
 .coverart {

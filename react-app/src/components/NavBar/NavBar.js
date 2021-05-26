@@ -1,16 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from 'react-router-dom';
 import LogoutButton from '../auth/LogoutButton';
 import './nav.css'
 import mango from '../../store/mango-logo.png'
+import { homeData } from '../../store/home'
 
 const NavBar = () => {
+  const dispatch = useDispatch();
+  const data = useSelector(state => state.home)
+  const [searchTerm, setSearchTerm] = useState('');
+  const albumsData = data.albums
+  const artistsData = data.artists
+  const songsData = data.songs
+
+  useEffect(() => {
+    (async () => {
+      await dispatch(homeData())
+    })();
+  }, [dispatch]);
+
+
   return (
     <div className="nav">
       <div className='navbar'>
         <NavLink to='/home'><img className='logo' src={mango}></img>
           <h1 className='music'>Music</h1></NavLink>
         <div className='navigation_container'>
+          <input className="search" type='text' placeholder="Search..." onChange={event => { setSearchTerm(event.target.value) }} />
           <div className='library'>Library
             <br></br>
             <div className='albums'><a href='/albums'><svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="#cf6b28" className="bi bi-stack" viewBox="0 0 16 16">

@@ -19,6 +19,13 @@
     top: -0%;
 }
 
+.search {
+    position: absolute;
+    margin-left: 60px;
+    top: 10%;
+    max-width: 12rem;
+}
+
 .library {
     display: block;
     margin-top: 11rem;
