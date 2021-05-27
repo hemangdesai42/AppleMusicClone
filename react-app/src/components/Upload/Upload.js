@@ -10,7 +10,7 @@ const UploadMusic = () => {
     const [artistName, setArtistName] = useState('')
     const [albumName, setAlbumName] = useState('')
     const [albumImage, setAlbumImage] = useState(null)
-
+    const [artistImage, setArtistImage] = useState(null)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -18,6 +18,7 @@ const UploadMusic = () => {
         formData.append("songItself", songItself);
         formData.append("name", name);
         formData.append("artistName", artistName);
+        formData.append("artistImage", artistImage);
         formData.append("albumName", albumName);
         formData.append("albumImage", albumImage);
         // aws uploads can be a bit slow—displaying
@@ -51,6 +52,11 @@ const UploadMusic = () => {
         setAlbumImage(file);
     }
 
+    const updateImage1 = (e) => {
+        const file = e.target.files[0];
+        setArtistImage(file);
+    }
+
     return (
         <main>
             <div className='page'>
@@ -80,6 +86,13 @@ const UploadMusic = () => {
                             placeholder='Artist Name'
                             value={artistName}
                             onChange={(e) => setArtistName(e.target.value)}
+                        /></div>
+                        <br></br>
+                        <div><input
+                            className='artistImage1'
+                            type="file"
+                            accept="image/*"
+                            onChange={updateImage1}
                         /></div>
                         <br></br>
                         <div><input

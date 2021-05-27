@@ -16,6 +16,7 @@ def upload_song():
     songItself = request.files["songItself"]
     name = request.form["name"]
     artistName = request.form["artistName"]
+    artistImage = request.files["artistImage"]
     albumName = request.form["albumName"]
     albumImage = request.files["albumImage"]
 
@@ -24,9 +25,10 @@ def upload_song():
 
     songItself.filename = get_unique_filename(songItself.filename)
     albumImage.filename = get_unique_filename(albumImage.filename)
+    artistImage.filename = get_unique_filename(artistImage.filename)
     upload = upload_file_to_s3(songItself)
     uploadImage = upload_file_to_s3(albumImage)
-
+    uploadImage2 = upload_file_to_s3(artistImage)
     if "url" not in upload:
         # if the dictionary doesn't have a url key
         # it means that there was an error when we tried to upload
@@ -38,12 +40,14 @@ def upload_song():
 
     url = upload["url"]
     urlImage = uploadImage["url"]
+    urlImage1 = uploadImage2["url"]
     # flask_login allows us to get the current user from the request
     artist = Artist.query.filter_by(name=artistName).first()
     if artist:
         song_artist = artist
     else:
-        song_artist = Artist(name=artistName, userId=current_user.id)
+        song_artist = Artist(
+            name=artistName, imageUrl=urlImage1, userId=current_user.id)
         db.session.add(song_artist)
 
     album = Album.query.filter_by(name=albumName).first()
@@ -57,4 +61,4 @@ def upload_song():
     new_music = Song(userId=current_user.id, songItself=url, name=name, albums=song_album, artists=song_artist) 
     db.session.add(new_music)
     db.session.commit()
-    return {"url": url, "urlImage": urlImage}
+    return {"url": url, "urlImage": urlImage, "urlImage1": url}

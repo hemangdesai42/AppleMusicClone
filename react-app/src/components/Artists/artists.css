@@ -19,8 +19,8 @@
     overflow-x: hidden;
     overflow-y: scroll;
     height: 100%;
-    margin-top: 1rem;
-    margin-bottom: -220px;
+    margin-top: 4rem;
+    margin-bottom: -560px;
 }
 
 .artists_items::-webkit-scrollbar {
@@ -40,6 +40,8 @@
     overflow-x: hidden;
     overflow-y: scroll;
     height: 100%;
+    max-width: 1004px;
+    min-height: 921px;
 }
 
 .artists_container::-webkit-scrollbar {
@@ -47,16 +49,18 @@
 }
 
 .artists_img {
-    width: 400px;
-    height: 400px;
-    padding: 2rem 2rem 2rem 4rem;
+    margin-left: 2rem;
+    width: 300px;
+    height: 300px;
+    box-shadow: 5px 5px 5px #414141;
+    border-radius: 4px;
 }
 
 .artists_name {
     font-size: 25px;
     position: absolute;
     color: white;
-    margin-left: 4rem;
+    margin-left: 2.5rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: -1.5rem;
+    margin-top: 1rem;
 }

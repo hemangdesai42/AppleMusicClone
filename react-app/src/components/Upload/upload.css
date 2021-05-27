@@ -45,6 +45,21 @@ input[type="file"] {
     margin-left: 17px;
 }
 
+.artistImage1 {
+    /* background-color : #cf6b28;  */
+    border: 1px solid #cf6b28;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    width: 15rem;
+    height: 2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white
+}
+
+.albumArea {
+    margin-top: 2.5rem;
+}   
+
 .songName {
     background-color : #cf6b28; 
     border: 1px solid #cf6b28;
@@ -67,6 +82,7 @@ input[type="file"] {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white
 }
+
 
 .submit {
     position: relative;

@@ -6,7 +6,7 @@
 .title_song {
     color: white;
     position: absolute;
-    left: 22%;
+    left: 18%;
     top: 14%;
     margin-bottom: 25%;
 }
@@ -14,17 +14,17 @@
 .line_song {
     color: white;
     position: absolute;
-    left: 22%;
+    left: 18%;
     top: 20%;
     color: #cf6b28;
 }
 
 
-.songs_container {
+.songs_container1 {
     display: inline-block;
     /* position: fixed; */
     margin-top: 14rem;
-    margin-left: 13rem;
+    margin-left: 15rem;
     /* flex-direction: row;
     flex-wrap: wrap; */
     justify-content: center;
@@ -34,7 +34,11 @@
     height: 100%;
 }
 
-.song_items {
+.songs_container1::-webkit-scrollbar {
+  display: none;
+}
+
+.song_items1 {
     display: inline;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -42,7 +46,7 @@
     margin-top: 1rem;
 }
 
-.song_name {
+.song_name1 {
     font-size: 25px;
     position: absolute;
     /* border: 1px solid #cf6b28; */
