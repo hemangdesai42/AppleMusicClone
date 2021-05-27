@@ -1,13 +1,94 @@
+.page_container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-width: 1004px;
+    min-height: 921px;
+}
+
+.page_container::-webkit-scrollbar {
+  display: none;
+}
+
 .album_container {
     display: flex;
     position: fixed;
-    margin-top: 8rem;
+    margin-top: 3rem;
     margin-left: 15rem;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+}
+
+.album_container::-webkit-scrollbar {
+  display: none;
+}
+
+
+.one_coverart {
+    margin-top: 5.5rem;
+    margin-left: 2rem;
+    width: 300px;
+    height: 300px;
+    box-shadow: 5px 5px 5px #414141;
+    border-radius: 4px;
+}
+
+
+.album_names {
+    font-size: 35px;
+    position: absolute;
+    color: white;
+    margin-left: 24rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 13rem;
+    min-width: 25rem;
+}
+
+.artist_name {
+    font-size: 20px;
+    position: absolute;
+    color: #cf6b28;
+    margin-left: 24rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: -9rem;
+    min-width: 15rem;   
+}
+
+.songs_container {
+    display: block;
+    position: fixed;
+    margin-top: 30rem;
+    margin-left: 17rem;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
     overflow-y: scroll;
-    height: 100%;
+    /* height: 100%; */
+    font-size: 25px;
+    border: 0px solid;
+    width: 900px;
+    height: 300px;
+    color: white;
+}
+
+.songs_container::-webkit-scrollbar {
+  display: none;
+}
+
+table, th, td {
+  border-top: 1px solid #2e2e2e;
+  border-bottom: 1px solid #2e2e2e;
+  border-collapse: collapse;
+  width: 900px;
+  padding: 5px 5px 5px 5px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.play {
+    position: fixed;
+    margin-top: 10px;
+    margin-left: -20px;
 }

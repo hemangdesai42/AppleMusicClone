@@ -9,9 +9,9 @@ function Home() {
     const data = useSelector(state => state.home)
     const albumsData = data.albums
     const artistsData = data.artists
-    console.log(data)
+    // console.log(data)
     // console.log(albumsData ? albumsData[0] : null)
-    console.log(data ? data['albums'] : null)
+    // console.log(data ? data['albums'] : null)
 
     useEffect(() => {
         (async () => {
@@ -28,7 +28,7 @@ function Home() {
     return (
         <div className='albums_container'>
             <h1 className='title_library'>Recently Added</h1>
-            <div className='line_library'>_________________________________________________________________________________________________________________________________</div>
+            <div className='line_library'>__________________________________________________________________________________________________________________________________________</div>
             {albumsData ? albumsData.slice(0).reverse().map((album) => {
                 return (
                     <div className='home_items'>

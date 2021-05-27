@@ -19,7 +19,7 @@ def playlists_page():
 @playlist_routes.route('/create', methods = ['POST'])
 @login_required
 def create_playlists():
-    playlist = Playlist(userId=current_user.id, playlistId=Playlist.id, playlistName=Playlist.name, imageUrl=Playlist.imageUrl,)
+    playlist = Playlist(userId=current_user.id, playlistId=Playlist.id, playlistName=Playlist.name, imageUrl=Playlist.imageUrl)
 
     db.session.add(playlist)
     db.session.commit()
@@ -53,12 +53,10 @@ def delete_playlistsong(playlistId, songId):
     return {'deleteSong': playlistSong.to_dict()}
 
 #Grab All Songs from a Playlist
-
-
 @playlist_routes.route("/<int:playlistId>/songs/", methods=["GET"])
 @login_required
 def get_playlistsongs(id, playlistId):
-    playlists = Playlist.query.options(joinedload('songs')).get(id)
+    playlistsSongs = Playlist.query.options(joinedload('songs')).get(id)
     songs = Song.query.filter_by(songId=playlistId)
 
-    return {"songs": [song.to_dict() for song in songs]}
+    return {"songs": [song.to_dict() for song in playlistsSongs.songs]}

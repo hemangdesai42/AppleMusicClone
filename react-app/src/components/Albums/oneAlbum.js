@@ -8,14 +8,13 @@ function Album() {
     const dispatch = useDispatch();
     const info = useSelector(state => state.albumReducer)
     const { id } = useParams();
-    console.log(info)
     
-    const albumInfo = info.album
+    
+    const albumInfo = info['album']
     const allSongs = info.songs
+    const artistInfo = info['artists']
 
-    console.log(info ? info['album'] : null)
-
-
+    console.log(artistInfo ? artistInfo : null)
 
     useEffect(() => {
         (async () => {
@@ -26,19 +25,29 @@ function Album() {
 
 
     return (
+        <div className="page_container">
         <div className='album_container'>
-            <div className='artwork'>
-                {/* {for (const )} */}
+            <div className='album'>
+                {albumInfo ? <div className='album_names'>{albumInfo['name']}</div> : null}
+                {albumInfo ? <div><img className='one_coverart' src={albumInfo['imageUrl']} alt=''></img></div> : null}
+                {artistInfo ? <div className='artist_name'>{(artistInfo[0])['name']}</div> : null}
             </div>
-            <div className='songs'>
+            </div>
+            <table className='songs_container'>
+                <tbody>
                 {allSongs ? allSongs.map((song) => {
                     return (
-                        <div className='oneAlbum_items'>
-                            <h1 className='songNames'>{song['name']}</h1>
-                        </div>
+                        <tr className='oneAlbum_items'>
+                            <td className='songNames'>{song['name']}</td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#cf6b28" className="play" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
+                            </svg>
+                        </tr>
                     )
                 }) : null}
-            </div>
+                </tbody>
+            </table>
         </div>
     )
 

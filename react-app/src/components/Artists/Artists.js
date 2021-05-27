@@ -22,10 +22,10 @@ function Artists() {
             <div className='line'>__________________________________________________________________________________________________________________________________________</div>
             {artists ? artists.slice(0).reverse().map((artist) => {
                 return (
-                    <div className='artist_items'>
-                        <img className='artist_img' src={artist['imageUrl']}></img>
+                    <div className='artists_items'>
+                        <img className='artists_img' src={artist['imageUrl']}></img>
                         <br></br>
-                        <div className='artist_name'>{artist['name']}</div>
+                        <div className='artists_name'>{artist['name']}</div>
                     </div>
                 )
             }) : null}

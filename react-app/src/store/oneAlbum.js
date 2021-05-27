@@ -9,7 +9,6 @@ export const albumData = (id) => async (dispatch) => {
     const res = await fetch(`/api/albums/${id}`);
     const albumData = await res.json();
     if (res.ok) {
-        console.log(albumData)
         await dispatch(getAlbum(albumData))
     }
 }
@@ -31,9 +30,16 @@ const intialState = {
         albumId: '',
         releaseDate: '',
         songLength: '',
-    
+    },
+    artistDict: {
+            id: '',
+            name: '',
+            bio: '',
+            imageUrl: '',
+            userId: '',
+        },
 }
-}
+
 
 export default function albumReducer(state = intialState, action) {
     switch (action.type) {

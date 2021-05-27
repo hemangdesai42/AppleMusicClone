@@ -15,14 +15,18 @@
     color: #cf6b28;
 }
 
-.artist_items {
+.artists_items {
     overflow-x: hidden;
     overflow-y: scroll;
     height: 100%;
     margin-top: 1rem;
-    margin-bottom: -350px;
-
+    margin-bottom: -220px;
 }
+
+.artists_items::-webkit-scrollbar {
+  display: none;
+}
+
 
 .artists_container {
     display: flex;
@@ -38,13 +42,17 @@
     height: 100%;
 }
 
-.artist_img {
-    width: 400px;
-    height: 400px;
-    padding: 4rem 2rem 2rem 4rem;
+.artists_container::-webkit-scrollbar {
+  display: none;
 }
 
-.artist_name {
+.artists_img {
+    width: 400px;
+    height: 400px;
+    padding: 2rem 2rem 2rem 4rem;
+}
+
+.artists_name {
     font-size: 25px;
     position: absolute;
     color: white;

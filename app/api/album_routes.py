@@ -1,5 +1,5 @@
 from flask import Blueprint, request
-from app.models import db, User, Album, Song
+from app.models import artist, db, User, Album, Song, Artist
 from flask_login import current_user, login_required
 
 album_routes = Blueprint('albums', __name__)
@@ -19,5 +19,6 @@ def albums_page():
 def get_album(id):
     album = Album.query.get(id)
     songs = Song.query.filter_by(albumId=id)
-
-    return {"album": album.to_dict(), "songs": [song.to_dict() for song in songs]}
+    artists = Artist.query.filter_by(id=album.artistId)
+    return {"album": album.to_dict(), "songs": [song.to_dict() for song in songs],
+            "artists": [artist.to_dict() for artist in artists]}

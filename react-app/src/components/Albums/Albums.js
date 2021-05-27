@@ -20,11 +20,11 @@ function Albums() {
     return (
         <div className='albums_container'>
             <h1 className='album_library'>My Albums</h1>
-            <div className='albumline_library'>__________________________________________________________________________________________________________________</div>
+            <div className='albumline_library'>__________________________________________________________________________________________________________________________________________</div>
             {albums ? albums.slice(0).reverse().map((album) => {
                 return (
                     <div className='album_items'>
-                        <NavLink to={`/albums/${album['id']}`}><img className='coverart' src={album['imageUrl']}></img></NavLink>
+                        <NavLink to={`/albums/${album['id']}`}><img className='coverart1' src={album['imageUrl']}></img></NavLink>
                         <div className='album_name'>{album['name']}</div>
                     </div>
                 )
