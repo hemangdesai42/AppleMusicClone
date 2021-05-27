@@ -33,7 +33,7 @@ function Home() {
                 return (
                     <div className='home_items'>
                         <NavLink to={`/albums/${album['id']}`}><img className='coverart' src={album['imageUrl']}></img></NavLink>
-                        <div className='name'>{album['name']}</div>
+                        <div className='name2'>{album['name']}</div>
                         
                     </div>
                     ) 
