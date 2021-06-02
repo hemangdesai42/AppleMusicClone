@@ -1,5 +1,7 @@
 const ALL_SONGS = "ALL_SONGS";
 
+// const DELETE_SONG = "DELETE_SONG";
+
 const getSongs = (data) => ({
     type: ALL_SONGS,
     payload: data
@@ -12,6 +14,7 @@ export const songsData = () => async (dispatch) => {
         await dispatch(getSongs(data))
     }
 }
+
 
 const intialState = {
     songDict: {

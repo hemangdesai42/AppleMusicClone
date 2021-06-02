@@ -147,25 +147,39 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #1f1f1f;
     margin-left: 17px;
-    margin-bottom: 2rem;
     transition: all 0.2s ease-in-out;
     margin-top: 1.5rem;
 }
 
-.albumImage::-webkit-file-upload-button {
+.albumImageUpload::-webkit-file-upload-button {
   visibility: hidden;
 }
 
+.albumImageUpload {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
 .albumImage {
-    /* background-color : #cf6b28;  */
     border: 1px solid #cf6b28;
+    background-color: #cf6b28;
     border-radius: 4px;
-    margin-bottom: 1rem;
     width: 15rem;
     height: 2rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
+    color: #1f1f1f;
+    position: absolute;
     margin-left: 17px;
+    text-align:justify;
+    transition: all 0.2s ease-in-out;
+}
+
+.albumImage:hover {
+    transform: scale(1.05);
 }
 
 
@@ -174,7 +188,7 @@
     left: 22%;
     width: 10rem;
     height: 2rem;
-    margin-top: 1rem;
+    margin-top: 5rem;
     color: #cf6b28;
     border: 1px solid #cf6b28;
     background-color: #2e2e2e;
