@@ -21,7 +21,7 @@
     color: white;
     position: absolute;
     font-size: 35px;
-    top: 13%;
+    top: 12%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -33,43 +33,127 @@
     height: 400px;
 }
 
+.songfile::-webkit-file-upload-button {
+  visibility: hidden;
+}
 
-input[type="file"] {
+.songfile {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.songFile {
     border: 1px solid #cf6b28;
+    background-color: #cf6b28;
     border-radius: 4px;
     width: 15rem;
     height: 2rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
+    color: #1f1f1f;
     position: absolute;
     margin-left: 17px;
+    text-align:justify;
+    transition: all 0.2s ease-in-out;
 }
 
-.artistImage1 {
-    /* background-color : #cf6b28;  */
-    border: 1px solid #cf6b28;
-    border-radius: 4px;
-    margin-bottom: 2rem;
-    width: 15rem;
-    height: 2rem;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white
+.songFile:hover {
+    transform: scale(1.05);
 }
 
-.albumArea {
-    margin-top: 2.5rem;
-}   
+.upload {
+    margin-left: 5rem;
+    margin-top: 0.25rem;
+}
 
 .songName {
     background-color : #cf6b28; 
     border: 1px solid #cf6b28;
     border-radius: 4px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     width: 15rem;
     height: 2rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
     margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+.artistArea {
+    background-color : #cf6b28; 
+    border: 1px solid #cf6b28;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    width: 15rem;
+    height: 2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    margin-top: -1rem;
+    margin-left: 1rem;
+}
+
+.artistImage1::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+
+.artistImage1 {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+/* .artistArea {
+    margin-top: 1;
+} */
+
+.artistImageArt {
+    position: absolute;
+    border: 1px solid #cf6b28;
+    background-color: #cf6b28;
+    border-radius: 4px;
+    width: 15rem;
+    height: 2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #1f1f1f;
+    margin-left: 17px;
+    margin-bottom: 2rem;
+    transition: all 0.2s ease-in-out;
+    margin-top: -0.5rem;
+}
+
+.artistImageArt:hover {
+    transform: scale(1.05);
+}
+
+.upload1 {
+    margin-left: 3.4rem;
+    margin-top: 0.25rem;
+}
+
+.albumArea {
+    position: relative;
+    border: 1px solid #cf6b28;
+    background-color: #cf6b28;
+    border-radius: 4px;
+    width: 15rem;
+    height: 2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #1f1f1f;
+    margin-left: 17px;
+    margin-bottom: 2rem;
+    transition: all 0.2s ease-in-out;
+    margin-top: 1.5rem;
+}
+
+.albumImage::-webkit-file-upload-button {
+  visibility: hidden;
 }
 
 .albumImage {
@@ -80,7 +164,8 @@ input[type="file"] {
     width: 15rem;
     height: 2rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white
+    color: white;
+    margin-left: 17px;
 }
 
 
@@ -89,7 +174,7 @@ input[type="file"] {
     left: 22%;
     width: 10rem;
     height: 2rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
     color: #cf6b28;
     border: 1px solid #cf6b28;
     background-color: #2e2e2e;

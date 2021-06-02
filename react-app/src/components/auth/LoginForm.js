@@ -20,6 +20,11 @@ const LoginForm = () => {
     }
   };
 
+  const demoSubmit = async (e) => {
+    setUsername('demo1')
+    setPassword('password')
+  }
+
   const updateUsername = (e) => {
     setUsername(e.target.value);
   };
@@ -45,6 +50,7 @@ const LoginForm = () => {
           </div>
           <div>
             <input
+              className="username"
               name="username"
               type="text"
               placeholder="Username"
@@ -56,12 +62,19 @@ const LoginForm = () => {
             <input
               name="password"
               type="password"
+              className='password_login'
               placeholder="Password"
               value={password}
               onChange={updatePassword}
             />
           </div>
             <button className='login' type="submit">Login</button>
+            <br></br>
+            <button 
+            type="submit" 
+            onClick={demoSubmit} 
+            className="demoSubmitButton"
+            >Demo Login</button>
         </form>
         </div>
         <div className="not">

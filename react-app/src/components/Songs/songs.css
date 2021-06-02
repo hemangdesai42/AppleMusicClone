@@ -1,57 +1,78 @@
-.body, .html {
-    max-width: 784px;
-    max-height: 921px
+
+
+.html::-webkit-scrollbar {
+  display: none;
 }
 
-.title_song {
+.main_container {
+    max-width: 1004px;
+    min-height: 921px;
+}
+
+.main_container::-webkit-scrollbar {
+  display: none;
+}
+
+
+.mysongs {
     color: white;
-    position: absolute;
-    left: 18%;
+    position: fixed;
+    left: 16rem;
     top: 14%;
     margin-bottom: 25%;
 }
 
-.line_song {
+.line_song1 {
     color: white;
-    position: absolute;
-    left: 18%;
+    position: fixed;
+    left: 16rem;
     top: 20%;
     color: #cf6b28;
 }
 
 
-.songs_container1 {
-    display: inline-block;
-    /* position: fixed; */
-    margin-top: 14rem;
+.songs_contain {
+    display: block;
+    position: fixed;
+    margin-top: 13rem;
     margin-left: 15rem;
-    /* flex-direction: row;
-    flex-wrap: wrap; */
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
     overflow-y: scroll;
     height: 100%;
+    font-size: 25px;
+    border: 0px solid;
+    width: 900px;
+    height: 500px;
+    color: white;
 }
 
-.songs_container1::-webkit-scrollbar {
+.songs_contain::-webkit-scrollbar {
   display: none;
 }
 
-.song_items1 {
-    display: inline;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    height: 100%;
-    margin-top: 1rem;
+
+
+table, th, td {
+  border-top: 1px solid #2e2e2e;
+  border-bottom: 1px solid #2e2e2e;
+  border-collapse: collapse;
+  width: 900px;
+  padding: 5px 5px 5px 5px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.song_name1 {
-    font-size: 25px;
-    position: absolute;
-    /* border: 1px solid #cf6b28; */
-    color: white;
-    margin-left: 4rem;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: -1.5rem;
+.play {
+    position: fixed;
+    margin-top: 13px;
+    margin-left: -50px;
+}
+
+.plus {
+    position: fixed;
+    margin-top: 10px;
+    margin-left: -20px;
 }

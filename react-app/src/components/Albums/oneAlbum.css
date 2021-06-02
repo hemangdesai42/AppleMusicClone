@@ -90,5 +90,11 @@ table, th, td {
 .play {
     position: fixed;
     margin-top: 10px;
+    margin-left: -50px;
+}
+
+.plus {
+    position: fixed;
+    margin-top: 10px;
     margin-left: -20px;
 }

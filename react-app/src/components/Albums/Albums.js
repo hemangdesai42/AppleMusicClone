@@ -23,7 +23,7 @@ function Albums() {
             <div className='albumline_library'>__________________________________________________________________________________________________________________________________________</div>
             {albums ? albums.slice(0).reverse().map((album) => {
                 return (
-                    <div className='album_items'>
+                    <div className='album_holder'>
                         <NavLink to={`/albums/${album['id']}`}><img className='coverart1' src={album['imageUrl']}></img></NavLink>
                         <div className='album_name'>{album['name']}</div>
                     </div>

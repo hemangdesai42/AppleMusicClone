@@ -42,7 +42,10 @@ body{
     transform: translate(-50%, -50%);
 }
 
-input[type="text"] {
+.name,
+.username_signup,
+.email,
+.password {
     background-color : #cf6b28; 
     border: 1px solid #cf6b28;
     border-radius: 4px;
@@ -51,19 +54,6 @@ input[type="text"] {
     height: 2rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white
-
-}
-
-input[type="password"] {
-    background-color : #cf6b28; 
-    border: 1px solid #cf6b28;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-    width: 15rem;
-    height: 2rem;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white
-
 }
 
 .signup {

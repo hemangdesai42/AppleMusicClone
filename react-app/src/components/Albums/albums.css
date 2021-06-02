@@ -20,10 +20,10 @@
     color: #cf6b28;
 }
 
-.album_items {
-    height: 100%;
+.album_holder {
+    height: 80%;
     margin-top: 1rem;
-    margin-bottom: -470px;
+    margin-bottom: -30rem;
 }
 
 .albums_container {
@@ -38,6 +38,7 @@
     overflow-y: scroll;
     max-width: 1004px;
     min-height: 921px;
+    height: 100%;
 }
 
 .albums_container::-webkit-scrollbar {
@@ -45,7 +46,6 @@
 }
 
 .coverart1 {
-    margin-top: 5.5rem;
     margin-left: 2rem;
     width: 300px;
     height: 300px;
