@@ -17,7 +17,7 @@ import Playlists from "./components/Playlists/Playlists"
 import UploadMusic from "./components/Upload/Upload";
 import Player from "./components/Player/Player"
 import Album from "./components/Albums/oneAlbum"
-
+import CreatePlaylist from "./components/CreatePlaylist/CreatePlaylist"
 
 function App() {
   // const [authenticated, setAuthenticated] = useState(false);
@@ -37,48 +37,35 @@ function App() {
 
   return (
     <BrowserRouter>
+    <NavBar />
+    <Player />
       <Switch>
         <Route path="/login" exact={true}>
-          <NavBar />
           <LoginForm />
         </Route>
         <Route path="/sign-up" exact={true}>
-          <NavBar />
           <SignUpForm />
         </Route>
         <ProtectedRoute path="/home" exact={true} >
-          <NavBar />
-          <Player />
           <Home />
         </ProtectedRoute>
         <ProtectedRoute path="/albums" exact={true} >
-          <NavBar />
-          <Player />
           <Albums />
         </ProtectedRoute>
         <ProtectedRoute path="/albums/:id" exact={true} >
-          <NavBar />
-          <Player />
           <Album />
         </ProtectedRoute>
         <ProtectedRoute path="/artists" exact={true} >
-          <NavBar />
-          <Player />
           <Artists />
         </ProtectedRoute>
         <ProtectedRoute path="/songs" exact={true} >
-          <NavBar />
-          <Player />
           <Songs />
         </ProtectedRoute>
         <ProtectedRoute path="/playlists" exact={true} >
-          <NavBar />
-          <Player />
+          <CreatePlaylist />
           <Playlists />
         </ProtectedRoute>
         <ProtectedRoute path='/upload' exact={true}>
-          <NavBar />
-          <Player />
           <UploadMusic />
         </ProtectedRoute>
         <ProtectedRoute path="/users" exact={true} >

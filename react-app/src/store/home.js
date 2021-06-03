@@ -14,35 +14,7 @@ export const homeData = () => async (dispatch) => {
 }
 
 const intialState = {
-    albumDict: {
-        id: '',
-        name: '',
-        userId: '',
-        artistId: '',
-        releaseDate: '',
-        order: '',
-        imageUrl: '',
-    },
-    artistDict: {
-        id: '',
-        name: '',
-        bio: '',
-        imageUrl: '',
-        userId: '',
-    },
-    songDict: {
-        id: '',
-        name: '',
-        songItself: '',
-        userId: '',
-        artistId: '',
-        albumId: '',
-        releaseDate: '',
-        songLength: '',
-    },
-    // playlistDict: {
-
-    // },
+    songs: []
 }
 
 export default function homeReducer(state = intialState, action) {

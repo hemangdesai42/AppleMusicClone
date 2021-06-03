@@ -12,3 +12,11 @@
 .controls {
     color: #cf6b28;
 }
+
+.audioPlayer {
+    position: absolute;
+    display: inline;
+    left: 50%;
+    height: 10px;
+    width: 250px;
+}

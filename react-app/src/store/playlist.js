@@ -29,15 +29,13 @@ export const playlistsSongs = (playlistId) => async (dispatch) => {
     }
 }
 
-export const createPlaylists = (userId, playlistId, playlistName, imageUrl) => async (dispatch) => {
+export const createPlaylists = (playlistName, imageUrl) => async (dispatch) => {
     const res = await fetch('/api/playlists/create', {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-            userId,
-            playlistId, 
+        body: JSON.stringify({ 
             playlistName, 
             imageUrl
         }),
