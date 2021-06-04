@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React from 'react';
 import { useDispatch} from 'react-redux'
 import { currentSong } from '../../store/player'
 

@@ -1,22 +1,22 @@
-.media_player {
-    position: fixed;
-    top: 2%;
-    left: 60%;
-    margin-bottom: -30px;;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    /* width: 70rem; */
-    /* border: 1px solid #cf6b28 */
-}
-
-.controls {
-    color: #cf6b28;
-}
-
 .audioPlayer {
     position: absolute;
-    display: inline;
-    left: 50%;
-    height: 10px;
-    width: 250px;
+    border: 1px solid #373737;
+    background-color: #1a1a1a;
+    /* display: inline; */
+    top: -0.025rem;
+    left: 14.45rem;
+    height: 80px;
+    width: 100%;
+}
+
+.button_container {
+    position: absolute;
+    left: 33%;
+    top: 1.5rem;
+    
+}
+
+.button_container > button {
+    margin: 1px 5px 1px 5px;
+    background-color: #1a1a1a
 }
