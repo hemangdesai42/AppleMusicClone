@@ -51,6 +51,7 @@
     height: 300px;
     box-shadow: 5px 5px 5px #414141;
     border-radius: 4px;
+    margin-top: -1rem;
 }
 
 .album_name {

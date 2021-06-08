@@ -1,5 +1,5 @@
 
-#modal {
+.modal {
   position: fixed;
   top: 0;
   right: 0;
@@ -10,18 +10,103 @@
   align-items: center;
 }
 
-#modal-background {
+.modal-background {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.516);
 }
 
-#modal-content {
+.modal-content {
   position: absolute;
-  /* background-color: #d8e3e7; */
+  left: 38%;
+  background-color: rgb(59, 59, 59);
   border-radius: 5px;
   padding: 35px;
+  width: 350px;
+  height: 200px;
+  box-shadow: 5px 5px 5px #636363;
+}
+
+.playlist_title {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-size: 35px;
+    margin-left: 3.5rem;
+    margin-bottom: 1rem;
+} 
+
+.playlist_form {
+  display: inline-block;
+}
+
+.playlist_name {
+    border: 1px solid #cf6b28;
+    background-color: #cf6b28;
+    border-radius: 4px;
+    width: 15rem;
+    height: 2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #1f1f1f;
+    margin-left: 3.5rem;
+    text-align:justify;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 1rem;
+}
+
+.playlist_name:hover {
+    transform: scale(1.05);
+}
+
+.playlist_imageUrl::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+
+.playlist_imageUrl {
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.playlist_imageup {
+    border: 1px solid #cf6b28;
+    background-color: #cf6b28;
+    border-radius: 4px;
+    width: 15.25rem;
+    height: 2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #1f1f1f;
+    margin-left: 3.5rem;
+    text-align:justify;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 1rem;
+}
+
+.playlist_imageup:hover {
+    transform: scale(1.05);
+}
+
+.playlist_create {
+    left: 22%;
+    width: 10rem;
+    height: 2rem;
+    margin-top: 2rem;
+    margin-left: 6rem;
+    color: #cf6b28;
+    border: 1px solid #cf6b28;
+    background-color: #2e2e2e;
+    border-radius: 4px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    transition: all 0.2s ease-in-out;
+}
+
+.playlist_create:hover {
+    transform: scale(1.05);
 }

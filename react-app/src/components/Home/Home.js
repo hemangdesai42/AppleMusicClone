@@ -9,21 +9,12 @@ function Home() {
     const data = useSelector(state => state.home)
     const albumsData = data.albums
     const artistsData = data.artists
-    // console.log(data)
-    // console.log(albumsData ? albumsData[0] : null)
-    // console.log(data ? data['albums'] : null)
 
-    useEffect(() => {
-        (async () => {
-            await dispatch(homeData())
-        })();
-    }, [dispatch]);
-
-    // function artists(artistsData) {
-    //         artistsData ? artistsData.map((artist) => {
-    //             return (artist)
-    //         }) : null
-    // }
+    // useEffect(() => {
+    //     (async () => {
+    //         await dispatch(homeData())
+    //     })();
+    // }, [dispatch]);
   
     return (
         <div className='albums_container'>

@@ -18,9 +18,8 @@ def playlists_page():
 #Create a Playlist
 @playlist_routes.route('/create', methods = ['POST'])
 @login_required
-def create_playlists():
-    playlist = Playlist(userId=current_user.id, playlistId=Playlist.id, playlistName=Playlist.name, imageUrl=Playlist.imageUrl)
-
+def create_playlists(userId, playlistName, imageUrl):
+    playlist = Playlist(userId=current_user.id, playlistName=Playlist.name, imageUrl=Playlist.imageUrl)
     db.session.add(playlist)
     db.session.commit()
     return {'playlist': playlist.to_dict()}

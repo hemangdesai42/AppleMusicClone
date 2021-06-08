@@ -1,5 +1,5 @@
 .audioPlayer {
-    position: absolute;
+    position: fixed;
     border: 1px solid #373737;
     background-color: #1a1a1a;
     /* display: inline; */

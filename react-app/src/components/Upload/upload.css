@@ -50,7 +50,7 @@
     border: 1px solid #cf6b28;
     background-color: #cf6b28;
     border-radius: 4px;
-    width: 15rem;
+    width: 15.25rem;
     height: 2rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #1f1f1f;
@@ -109,16 +109,12 @@
 	z-index: -1;
 }
 
-/* .artistArea {
-    margin-top: 1;
-} */
-
 .artistImageArt {
     position: absolute;
     border: 1px solid #cf6b28;
     background-color: #cf6b28;
     border-radius: 4px;
-    width: 15rem;
+    width: 15.25rem;
     height: 2rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #1f1f1f;
@@ -168,7 +164,7 @@
     border: 1px solid #cf6b28;
     background-color: #cf6b28;
     border-radius: 4px;
-    width: 15rem;
+    width: 15.25rem;
     height: 2rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #1f1f1f;

@@ -17,7 +17,7 @@ import Playlists from "./components/Playlists/Playlists"
 import UploadMusic from "./components/Upload/Upload";
 import Player from "./components/Player/Player"
 import Album from "./components/Albums/oneAlbum"
-import CreatePlaylist from "./components/CreatePlaylist/CreatePlaylist"
+// import CreatePlaylist from "./components/CreatePlaylist/CreatePlaylist"
 
 function App() {
   // const [authenticated, setAuthenticated] = useState(false);
@@ -62,7 +62,6 @@ function App() {
           <Songs />
         </ProtectedRoute>
         <ProtectedRoute path="/playlists" exact={true} >
-          <CreatePlaylist />
           <Playlists />
         </ProtectedRoute>
         <ProtectedRoute path='/upload' exact={true}>
