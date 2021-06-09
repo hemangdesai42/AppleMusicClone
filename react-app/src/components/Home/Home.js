@@ -10,11 +10,11 @@ function Home() {
     const albumsData = data.albums
     const artistsData = data.artists
 
-    // useEffect(() => {
-    //     (async () => {
-    //         await dispatch(homeData())
-    //     })();
-    // }, [dispatch]);
+    useEffect(() => {
+        (async () => {
+            await dispatch(homeData())
+        })();
+    }, [dispatch]);
   
     return (
         <div className='albums_container'>

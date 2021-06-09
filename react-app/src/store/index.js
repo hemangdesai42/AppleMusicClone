@@ -5,9 +5,11 @@ import home from './home'
 import albumsReducer from './album'
 import artistsReducer from './artist'
 import songsReducer from './song'
-import playlist from './playlist'
+import playlistsReducer from './playlist'
+import playlistReducer from './onePlaylist'
 import albumReducer from './oneAlbum'
 import player from './player'
+
 const rootReducer = combineReducers({
     session,
     home,
@@ -15,7 +17,8 @@ const rootReducer = combineReducers({
     albumReducer,
     artistsReducer,
     songsReducer,
-    playlist,
+    playlistsReducer,
+    playlistReducer,
     player
 });
 

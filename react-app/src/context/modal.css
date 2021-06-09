@@ -77,6 +77,7 @@
 .playlist_imageup {
     border: 1px solid #cf6b28;
     background-color: #cf6b28;
+    padding: 8px 2px 6px 8px;
     border-radius: 4px;
     width: 15.25rem;
     height: 2rem;

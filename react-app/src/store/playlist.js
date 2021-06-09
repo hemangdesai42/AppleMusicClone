@@ -2,6 +2,13 @@ const ALL_PLAYLISTS = "ALL_PLAYLISTS";
 
 const ALL_PLAYLISTSONGS = "ALL_PLAYLISTSONGS";
 
+const CREATE_PLAYLIST = "CREATE_PLAYLIST";
+
+
+const createPlaylist = (data) => ({
+    type: CREATE_PLAYLIST,
+    payload: data
+})
 
 const getPlaylists = (data) => ({
     type: ALL_PLAYLISTS,
@@ -29,17 +36,23 @@ export const playlistsSongs = (playlistId) => async (dispatch) => {
     }
 }
 
-export const createPlaylists = (userId, playlistName, imageUrl) => async (dispatch) => {
+export const createPlaylists = (name, imageUrl) => async (dispatch) => {
     const res = await fetch('/api/playlists/create', {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ 
-            userId, playlistName, imageUrl
+        body: JSON.stringify({
+            name, 
+            imageUrl
         }),
     });
-    const data = await res.json()
+    const data = await res.json();
+    if (data.errors) {
+        return data;
+    }
+    dispatch(createPlaylist(data));
+    return {};
 }
 
 export const addSongs = (playlistId, songId) => async (dispatch) => {
@@ -94,6 +107,8 @@ export default function playlistsReducer(state = intialState, action) {
         case ALL_PLAYLISTSONGS:
             const newStates = { ...action.payload }
             return newStates;
+        case CREATE_PLAYLIST:
+            return { data: action.payload}
         default:
             return state;
     }

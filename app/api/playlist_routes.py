@@ -1,6 +1,7 @@
 from flask import Blueprint, request
 from app.models import db, User, Playlist, PlaylistSong, Song
 from flask_login import current_user, login_required
+from app.forms import PlaylistForm
 from sqlalchemy.orm import joinedload
 
 
@@ -18,11 +19,27 @@ def playlists_page():
 #Create a Playlist
 @playlist_routes.route('/create', methods = ['POST'])
 @login_required
-def create_playlists(userId, playlistName, imageUrl):
-    playlist = Playlist(userId=current_user.id, playlistName=Playlist.name, imageUrl=Playlist.imageUrl)
-    db.session.add(playlist)
-    db.session.commit()
-    return {'playlist': playlist.to_dict()}
+def create_playlists():
+    form = PlaylistForm()
+    form['csrf_token'].data = request.cookies['csrf_token']
+    if form:
+        playlist = Playlist(
+            userId=current_user.id, 
+            name=form.data['name'], 
+            imageUrl=form.data['imageUrl']
+        )
+        db.session.add(playlist)
+        db.session.commit()
+        return playlist.to_dict()
+
+@playlist_routes.route("/<int:id>", methods=["GET"])
+@login_required
+def get_playlist(id):
+    playlist = Playlist.query.get(id)
+    playlistSongs = PlaylistSong.query.filter_by(playlistId=id)
+    # artists = Artist.query.filter_by(id=song.artistId)
+    return {"playlist": playlist.to_dict(), "playlistSongs": [playlistSong.to_dict() for playlistSong in playlistSongs],
+            }
 
 #Delete a Playlist
 @playlist_routes.route("/<int:id>/delete", methods=["DELETE"])

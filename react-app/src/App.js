@@ -17,6 +17,7 @@ import Playlists from "./components/Playlists/Playlists"
 import UploadMusic from "./components/Upload/Upload";
 import Player from "./components/Player/Player"
 import Album from "./components/Albums/oneAlbum"
+import Playlist from "./components/Playlists/onePlaylist"
 // import CreatePlaylist from "./components/CreatePlaylist/CreatePlaylist"
 
 function App() {
@@ -54,6 +55,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path="/albums/:id" exact={true} >
           <Album />
+        </ProtectedRoute>
+        <ProtectedRoute path="/playlists/:id" exact={true} >
+          <Playlist />
         </ProtectedRoute>
         <ProtectedRoute path="/artists" exact={true} >
           <Artists />
