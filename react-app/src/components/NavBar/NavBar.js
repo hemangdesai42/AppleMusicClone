@@ -14,7 +14,7 @@ const NavBar = () => {
   const artistsData = data.artists
   const songsData = data.songs
   // only want to search for album name, artist name, song name, and playlist name (after first 3)
-  console.log(albumsData, artistsData, songsData)
+  // console.log(albumsData, artistsData, songsData)
 
 
   useEffect(() => { 

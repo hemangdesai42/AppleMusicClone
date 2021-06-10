@@ -1,5 +1,5 @@
 from flask import Blueprint, request
-from app.models import db, User, Album, Song, Playlist, Artist, PlaylistSong
+from app.models import db, User, Album, Song, Playlist, Artist
 from flask_login import current_user, login_required
 
 home_routes = Blueprint('home', __name__)

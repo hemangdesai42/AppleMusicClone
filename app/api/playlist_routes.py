@@ -1,5 +1,5 @@
 from flask import Blueprint, request
-from app.models import db, User, Playlist, PlaylistSong, Song
+from app.models import db, User, Playlist, playlistSong, Song
 from flask_login import current_user, login_required
 from app.forms import PlaylistForm
 from sqlalchemy.orm import joinedload
@@ -32,14 +32,26 @@ def create_playlists():
         db.session.commit()
         return playlist.to_dict()
 
+# Get one playlist
 @playlist_routes.route("/<int:id>", methods=["GET"])
 @login_required
 def get_playlist(id):
     playlist = Playlist.query.get(id)
-    playlistSongs = PlaylistSong.query.filter_by(playlistId=id)
-    # artists = Artist.query.filter_by(id=song.artistId)
-    return {"playlist": playlist.to_dict(), "playlistSongs": [playlistSong.to_dict() for playlistSong in playlistSongs],
-            }
+    playlistSongs = playlist.songs
+    
+    return {"playlist": playlist.to_dict(), "playlistSongs": [playlistSong.to_dict() for playlistSong in playlistSongs]}
+
+    #Grab All Songs from a Playlist
+
+
+# @playlist_routes.route("/<int:id>", methods=["GET"])
+# @login_required
+# def get_playlistsongs(id, playlistId):
+#     playlistsSongs = Playlist.query.options(joinedload('songs')).get(id)
+#     songs = Song.query.filter_by(songId=playlistId)
+
+#     return {"songs": [song.to_dict() for song in playlistsSongs.songs]}
+
 
 #Delete a Playlist
 @playlist_routes.route("/<int:id>/delete", methods=["DELETE"])
@@ -67,12 +79,3 @@ def delete_playlistsong(playlistId, songId):
     db.session.delete(playlistSong)
     db.session.commit()
     return {'deleteSong': playlistSong.to_dict()}
-
-#Grab All Songs from a Playlist
-@playlist_routes.route("/<int:playlistId>/songs/", methods=["GET"])
-@login_required
-def get_playlistsongs(id, playlistId):
-    playlistsSongs = Playlist.query.options(joinedload('songs')).get(id)
-    songs = Song.query.filter_by(songId=playlistId)
-
-    return {"songs": [song.to_dict() for song in playlistsSongs.songs]}

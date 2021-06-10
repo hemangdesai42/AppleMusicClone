@@ -29,7 +29,7 @@ function Playlists() {
             {showModal && (<Modal onClose={() => setShowModal(false)}>
             </Modal>)}
             <br></br>
-            <div className='content_container'>
+            <div className='contents_container'>
             {playlists ? playlists.slice(0).reverse().map((playlist) => {
                 return (
                     <div className='playlist_holder'>
