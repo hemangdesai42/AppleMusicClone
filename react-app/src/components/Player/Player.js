@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import {useSelector, useDispatch} from 'react-redux'
-import { currentSong, nextSong, previousSong, addToQueue } from '../../store/player'
+import { nextSong, previousSong } from '../../store/player'
 import './player.css'
 
 const Player = () => {

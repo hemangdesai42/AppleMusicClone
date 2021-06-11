@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch} from 'react-redux'
 import { currentSong } from '../../store/player'
-
+import '../Songs/songs.css'
 const PlayButton = ({song}) => {
     const dispatch = useDispatch();
 

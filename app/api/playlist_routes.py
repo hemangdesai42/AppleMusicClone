@@ -41,17 +41,6 @@ def get_playlist(id):
     
     return {"playlist": playlist.to_dict(), "playlistSongs": [playlistSong.to_dict() for playlistSong in playlistSongs]}
 
-    #Grab All Songs from a Playlist
-
-
-# @playlist_routes.route("/<int:id>", methods=["GET"])
-# @login_required
-# def get_playlistsongs(id, playlistId):
-#     playlistsSongs = Playlist.query.options(joinedload('songs')).get(id)
-#     songs = Song.query.filter_by(songId=playlistId)
-
-#     return {"songs": [song.to_dict() for song in playlistsSongs.songs]}
-
 
 #Delete a Playlist
 @playlist_routes.route("/<int:id>/delete", methods=["DELETE"])
@@ -66,16 +55,16 @@ def delete_playlist(id):
 @playlist_routes.route("/<int:playlistId>/song/<int:songId>", methods=["POST"])
 @login_required
 def add_playlistsong(playlistId, songId):
-    playlistSong = PlaylistSong(playlist_id=playlistId, song_id=songId)
-    db.session.add(playlistSong)
+    playlistSongs = playlistSong(playlist_id=playlistId, song_id=songId)
+    db.session.add(playlistSongs)
     db.session.commit()
-    return {'addSongs': playlistSong.to_dict()}
+    return {'addSongs': playlistSongs.to_dict()}
 
-#Remove Song from Playlist
-@playlist_routes.route("/<int:playlistId>/song/<int:songId>", methods=["DELETE"])
-@login_required
-def delete_playlistsong(playlistId, songId):
-    playlistSong = PlaylistSong.query.filter_by(playlist_id=playlistId, song_id=songId).first()
-    db.session.delete(playlistSong)
-    db.session.commit()
-    return {'deleteSong': playlistSong.to_dict()}
+# #Remove Song from Playlist
+# @playlist_routes.route("/<int:playlistId>/song/<int:songId>", methods=["DELETE"])
+# @login_required
+# def delete_playlistsong(playlistId, songId):
+#     playlistSong = PlaylistSong.query.filter_by(playlist_id=playlistId, song_id=songId).first()
+#     db.session.delete(playlistSong)
+#     db.session.commit()
+#     return {'deleteSong': playlistSong.to_dict()}

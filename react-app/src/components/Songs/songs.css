@@ -60,7 +60,7 @@ table, th, td {
   border-top: 1px solid #2e2e2e;
   border-bottom: 1px solid #2e2e2e;
   border-collapse: collapse;
-  width: 900px;
+  width: 910px;
   padding: 5px 5px 5px 5px;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -68,11 +68,25 @@ table, th, td {
 .play {
     position: fixed;
     margin-top: 13px;
-    margin-left: -50px;
+    margin-left: -60px;
 }
 
 .plus {
     position: fixed;
     margin-top: 10px;
     margin-left: -20px;
+}
+
+.add_to_playlist {
+  position: fixed;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.song_artistName {
+    position: fixed;
+    margin-top: 10px;
+    margin-left: -22rem;
+    color: #cf6b28;
+    font-size: 18px;
 }

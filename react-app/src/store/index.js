@@ -19,7 +19,7 @@ const rootReducer = combineReducers({
     songsReducer,
     playlistsReducer,
     playlistReducer,
-    player
+    player,
 });
 
 let enhancer;

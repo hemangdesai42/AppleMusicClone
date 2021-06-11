@@ -4,7 +4,6 @@ const ALL_PLAYLISTSONGS = "ALL_PLAYLISTSONGS";
 
 const CREATE_PLAYLIST = "CREATE_PLAYLIST";
 
-
 const createPlaylist = (data) => ({
     type: CREATE_PLAYLIST,
     payload: data
@@ -19,6 +18,7 @@ const allPlaylistsongs = (data) => ({
     type: ALL_PLAYLISTSONGS,
     payload: data
 })
+
 
 export const playlistsData = () => async (dispatch) => {
     const res = await fetch('/api/playlists');
@@ -55,19 +55,6 @@ export const createPlaylists = (name, imageUrl) => async (dispatch) => {
     return {};
 }
 
-export const addSongs = (playlistId, songId) => async (dispatch) => {
-    const res = await fetch(`/api/playlists/${playlistId}/song/${songId}`, {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            playlistId, 
-            songId
-        }),
-    });
-    const data = await res.json()
-}
 
 export const deleteSongs = (playlistId, songId) => async (dispatch) => {
     const res = await fetch(`/api/playlists/${playlistId}/song/${songId}`, {
