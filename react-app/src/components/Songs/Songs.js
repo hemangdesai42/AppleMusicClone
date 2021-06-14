@@ -25,7 +25,9 @@ function Songs() {
             {songs ? songs.sort((a, b) => a.timeM > b.timeM ? 1 : -1).map((song) => {
                 return (
                     <tr className='song_items2'>
-                        <td className='song_name2'>{song['name']}</td><h7 className='song_artistName'>{song['artistName']}</h7><PlayButton song={song}/><QueueButton song={song}/>
+                        <td className='song_name2'>{song['name']}</td>
+                        <PlayButton song={song}/><QueueButton song={song}/>
+                        <h7 className='song_artistName'>{song['artistName']}</h7>
                     </tr>
                 )
             }) : null}
