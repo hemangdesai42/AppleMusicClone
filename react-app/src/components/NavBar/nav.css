@@ -22,9 +22,12 @@
 
 .search {
     position: absolute;
-    margin-left: 60px;
+    margin-left: 40px;
     top: 10%;
+    border-radius: 5px;
     max-width: 12rem;
+    height: 1.5rem;
+    background-color: #cf6b28;
 }
 
 .library {

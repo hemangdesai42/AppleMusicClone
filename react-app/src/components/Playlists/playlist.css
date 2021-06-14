@@ -46,10 +46,10 @@
 }
 
 .playlist_holder {
-    display: flex;
+    /* display: flex; */
     height: 100%;
-    margin-top: -5rem;
-    margin-bottom: -35rem;
+    margin-top: -55rem;
+    margin-bottom: -55rem;
 }
 
 .contents_container {
@@ -57,7 +57,7 @@
     position: fixed;
     flex-direction: row;
     top: 25%;
-    left: 22.5%;
+    left: 20.5%;
     flex-wrap: wrap;
     align-items: center;
     overflow-y: scroll;
@@ -86,5 +86,5 @@
     color: white;
     margin-left: 2.5rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 15.5rem;
+    margin-top: 1.5rem;
 }

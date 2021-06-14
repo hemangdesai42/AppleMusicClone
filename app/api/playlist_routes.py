@@ -21,7 +21,6 @@ def playlists_page():
 @login_required
 def create_playlists():
     form = PlaylistForm()
-    form['csrf_token'].data = request.cookies['csrf_token']
     if form:
         playlist = Playlist(
             userId=current_user.id, 
