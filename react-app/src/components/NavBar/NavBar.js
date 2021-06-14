@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, Redirect } from 'react-router-dom';
 import LogoutButton from '../auth/LogoutButton';
 import './nav.css'
 import mango from '../../store/mango-logo.png'
 import { homeData } from '../../store/home'
+import github from './github.png'
+import linkedIn from './linkedIn.png'
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -62,6 +64,8 @@ const NavBar = () => {
             </svg> Upload</Link></div>
             <br></br>
             <div><LogoutButton /></div>
+            <a href='https://github.com/hemangdesai42/AppleMusicClone'><img className='github' src={github}/></a>
+            <a href='https://www.linkedin.com/in/desaihemang42/'><img className='linkedIn' src={linkedIn} /></a>
           </div>
         </div>
       </div>
