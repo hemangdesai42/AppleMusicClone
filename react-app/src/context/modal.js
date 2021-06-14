@@ -1,8 +1,7 @@
 import React, { useContext, useRef, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './modal.css';
-import { Redirect, NavLink } from "react-router-dom";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { createPlaylists } from '../store/playlist'
 
 const ModalContext = React.createContext();

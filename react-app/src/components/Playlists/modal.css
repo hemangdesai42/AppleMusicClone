@@ -1,0 +1,73 @@
+
+.songModal {
+  position: fixed;
+  top: 10%;
+  right: 0;
+  left: 20%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.songModal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.516);
+}
+
+.songModal-content {
+  position: absolute;
+  left: 18%;
+  background-color: rgb(59, 59, 59);
+  border-radius: 5px;
+  padding: 35px;
+  width: 610px;
+  height: 300px;
+  box-shadow: 5px 5px 5px #636363;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.songModal-content::-webkit-scrollbar {
+  display: none;
+}
+
+.songsModal_contain {
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+    font-size: 25px;
+    border: 0px solid;
+    width: 600px;
+    height: 500px;
+    color: white;
+}
+
+.songsModal_contain::-webkit-scrollbar {
+  display: none;
+}
+
+table, th, td {
+  border-top: 1px solid #2e2e2e;
+  border-bottom: 1px solid #2e2e2e;
+  border-collapse: collapse;
+  width: 600px;
+  padding: 5px 5px 5px 5px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.song_artistName {
+    position: relative;
+    margin-top: 10px;
+    margin-left: -25rem;
+    color: #cf6b28;
+    font-size: 18px;
+}

@@ -7,7 +7,6 @@ import NavBar from "./components/NavBar/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
-// import { authenticate } from "./services/auth";
 import { authenticate } from "./store/session";
 import Home from "./components/Home/Home"
 import Albums from "./components/Albums/Albums"
@@ -18,10 +17,8 @@ import UploadMusic from "./components/Upload/Upload";
 import Player from "./components/Player/Player"
 import Album from "./components/Albums/oneAlbum"
 import Playlist from "./components/Playlists/onePlaylist"
-// import CreatePlaylist from "./components/CreatePlaylist/CreatePlaylist"
 
 function App() {
-  // const [authenticated, setAuthenticated] = useState(false);
   const dispatch = useDispatch()
   const [loaded, setLoaded] = useState(false);
 

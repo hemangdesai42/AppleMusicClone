@@ -51,7 +51,7 @@ def delete_playlist(id):
     db.session.commit()
     return {'delete': playlist.to_dict()}
 
-#Add Song to Playlist
+# Add Song to Playlist
 @playlist_routes.route("/<int:playlistId>/song/<int:songId>", methods=["POST"])
 @login_required
 def add_playlistsong(playlistId, songId):

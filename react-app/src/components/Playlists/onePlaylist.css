@@ -113,6 +113,10 @@ table, th, td {
   display: none;
 }
 
-.add_songs {
-  position: relative;
+.addSongs {
+  position: absolute;
+  top: 54%;
+  left: 30rem;
+  margin: 1px 5px 1px 5px;
+  background-color: #1a1a1a
 }
