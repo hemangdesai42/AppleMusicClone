@@ -6,7 +6,7 @@ import './player.css'
 const Player = () => {
     const dispatch = useDispatch()
     const currentSong = useSelector(state => state.player.current)
-
+    const user = useSelector(state => state.session.user)
     const player = document.getElementById('audioPlayer')
 
     useEffect(() => {
@@ -14,6 +14,7 @@ const Player = () => {
             player.play()
             console.log(player)
         }
+        //try commenting the return out and see if anything changes.
         return () => {
             player && player.pause()
         }
@@ -36,7 +37,7 @@ const Player = () => {
     }
 
 
-    return (
+    return user && (
         <>
         <audio
         className='controls'

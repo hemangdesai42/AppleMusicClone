@@ -2,6 +2,7 @@ import React, { useContext, useRef, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { songsData } from '../../store/song'
+import AddButton from './addtoplaylist'
 import './modal.css';
 
 const ModalContext = React.createContext();
@@ -47,7 +48,7 @@ export function SongModal({ onClose, children }) {
                         {songs ? songs.sort((a, b) => a.timeM > b.timeM ? 1 : -1).map((song) => {
                             return (
                                 <tr className='song_items2'>
-                                    <td className='song_name2'>{song['name']}</td>
+                                    <AddButton /><td className='song_name2'>{song['name']}</td>
                                     <h9 className='song_artistName'>{song['artistName']}</h9>
                                 </tr>
                             )

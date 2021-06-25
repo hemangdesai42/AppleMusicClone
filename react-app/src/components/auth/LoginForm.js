@@ -21,8 +21,8 @@ const LoginForm = () => {
   };
 
   const demoSubmit = async (e) => {
-    setUsername('demo1')
-    setPassword('password')
+    setUsername('hmang42')
+    setPassword('123456')
   }
 
   const updateUsername = (e) => {
