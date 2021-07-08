@@ -8,6 +8,7 @@ const addPlaylistsong = (playlistId, songId) => ({
 
 
 export const addSong = (playlistId, songId) => async (dispatch) => {
+    console.log(playlistId, songId)
     const res = await fetch(`/api/playlists/${playlistId}/song/${songId}`, {
         method: "POST",
         headers: {
@@ -33,9 +34,11 @@ const initialState = {
     }
 }
 
-export default function reducer(state = initialState, action) {
+export default function addSongReducer(state = initialState, action) {
     switch (action.type) {
         case ADD_SONG:
+            const newState = { addSongs: action.payload }
+            return newState;
         default:
             return state;
     }
