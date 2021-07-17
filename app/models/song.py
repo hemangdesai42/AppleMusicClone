@@ -20,7 +20,7 @@ class Song(db.Model):
 
     albums = db.relationship("Album", back_populates="songs")
     artists = db.relationship("Artist", back_populates="songs")
-    playlists = db.relationship("Playlist", secondary=playlistSong, back_populates="songs")
+    playlists = db.relationship("Playlist", secondary="playlistSongs", back_populates="songs")
 
     def to_dict(self):
         return {

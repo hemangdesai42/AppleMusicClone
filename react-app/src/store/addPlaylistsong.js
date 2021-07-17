@@ -1,43 +1,42 @@
 const ADD_SONG = "ADD_SONG";
 
 
-const addPlaylistsong = (playlistId, songId) => ({
+const addPlaylistsong = (playlist_id, song_id) => ({
     type: ADD_SONG,
-    payload: playlistId, songId
+    payload: playlist_id, song_id
 })
 
 
-export const addSong = (playlistId, songId) => async (dispatch) => {
-    console.log(playlistId, songId)
-    const res = await fetch(`/api/playlists/${playlistId}/song/${songId}`, {
+export const addSong = (playlist_id, song_id) => async (dispatch) => {
+    console.log(playlist_id, song_id)
+    const res = await fetch(`/api/playlists/${playlist_id}/song/${song_id}`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            playlistId,
-            songId
+            playlist_id,
+            song_id
         }),
     });
     const data = await res.json();
     if (data.errors) {
         return data;
     }
-    return dispatch(addPlaylistsong(data));
+    dispatch(addPlaylistsong(data));
+    return {}
 }
 
 
 const initialState = { 
-    addSongs: {
-        playlistId: '',
-        songId: ''
-    }
+    playlist_id: null,
+    song_id: null
 }
 
 export default function addSongReducer(state = initialState, action) {
     switch (action.type) {
         case ADD_SONG:
-            const newState = { addSongs: action.payload }
+            const newState = { data: action.payload }
             return newState;
         default:
             return state;

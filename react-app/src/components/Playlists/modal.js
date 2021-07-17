@@ -1,8 +1,9 @@
 import React, { useContext, useRef, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
+// import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { songsData } from '../../store/song'
-import AddButton from './addtoplaylist'
+import { addSong } from '../../store/addPlaylistsong'
 import './modal.css';
 
 const ModalContext = React.createContext();
@@ -25,8 +26,21 @@ export function ModalProvider2({ children }) {
 export function SongModal({ onClose, children }) {
     const dispatch = useDispatch();
     const data = useSelector(state => state.songsReducer)
-    const songs = data.songs
+    const playlistId = useSelector(state => state.playlistReducer.playlist.id)
 
+    const songs = data.songs
+ 
+
+    const song_id = songs ? songs.map((song) => { return song.id; }): null
+    console.log(song_id)
+
+    // const [songId, setSongId] = useState(null)
+
+    const add = (songId) => {
+        console.log(songId, "---------------", playlistId)
+        dispatch(addSong(playlistId, songId))
+        // setSongId(null)
+    }
 
     useEffect(() => {
         (async () => {
@@ -45,10 +59,12 @@ export function SongModal({ onClose, children }) {
                 {children}
                 <div className='songsModal_contain'>
                     <table className='songsModal_contain1'>
-                        {songs ? songs.sort((a, b) => a.timeM > b.timeM ? 1 : -1).map((song) => {
+                        {songs ? songs.map((song) => {
                             return (
                                 <tr className='song_items2'>
-                                    <AddButton /><td className='song_name2'>{song['name']}</td>
+                                    <svg onClick={add(song['id'])} xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#cf6b28" className="addSong" viewBox="0 0 16 16">
+                                        <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z" />
+                                    </svg><td className='song_name2'>{song['name']}</td>
                                     <h9 className='song_artistName'>{song['artistName']}</h9>
                                 </tr>
                             )

@@ -51,13 +51,15 @@ def delete_playlist(id):
     return {'delete': playlist.to_dict()}
 
 # Add Song to Playlist
-@playlist_routes.route("/<int:playlistId>/song/<int:songId>", methods=["POST"])
+@playlist_routes.route("/<int:playlist_id>/song/<int:song_id>", methods=["POST"])
 @login_required
-def add_playlistsong(playlistId, songId):
-    playlistSongs = playlistSong(playlist_id=playlistId, song_id=songId)
+def add_playlistsong(playlist_id, song_id):
+    playlist = Playlist.query.filter_by(playlist_id)
+    song = Song.query.filter_by(song_id)
+    playlistSongs = playlistSong(playlist_id=playlist.id, song_id=song.id)
     db.session.add(playlistSongs)
     db.session.commit()
-    return {'addSongs': playlistSongs.to_dict()}
+    return {'playlistSongs': playlistSongs}
 
 # #Remove Song from Playlist
 # @playlist_routes.route("/<int:playlistId>/song/<int:songId>", methods=["DELETE"])
