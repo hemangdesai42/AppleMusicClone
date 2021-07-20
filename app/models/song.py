@@ -1,7 +1,7 @@
 from .db import db
 from .user import User
 from .artist import Artist
-from .playlistsong import playlistSong
+from .playlistSong import playlistSong
 # from .album import Album
 # from .playlist import Playlist
 
