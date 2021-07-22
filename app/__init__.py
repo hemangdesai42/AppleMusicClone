@@ -5,7 +5,8 @@ from flask_migrate import Migrate
 from flask_wtf.csrf import CSRFProtect, generate_csrf
 from flask_login import LoginManager
 
-from .models import db, User, Song, playlistSong, Playlist, Artist, Album
+from .models import db, User, Song, Playlist, Artist, Album
+from .models import playlistSong
 from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
 from .api.home_routes import home_routes

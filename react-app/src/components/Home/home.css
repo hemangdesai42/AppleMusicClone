@@ -1,25 +1,25 @@
-.body, .html {
+/* .body, .html {
     max-width: 100vw;
     max-height: 921px
-}
+} */
 
 .title_library {
     color: white;
     position: absolute;
-    left: 4%;
-    top: -2%;
+    left: 20%;
+    top: 10%;
     margin-bottom: 25%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 
-.line_library {
+/* .line_library {
     color: white;
     position: absolute;
     left: 3%;
     top: 5%;
     color: #cf6b28;
-}
+} */
 
 .home_items {
     /* overflow-x: hidden;
@@ -27,24 +27,15 @@
     height: 100%;
     margin-top: -1rem;
     margin-bottom: -530px;
+    
 }
 
-.albums_container {
-    display: flex;
-    position: fixed;
-    margin-top: 8rem;
-    margin-left: 15rem;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    /* overflow-x: hidden; */
-    overflow-y: scroll;
-    height: 100%;
-    max-width: 1004px;
+.homepage_albums_container,
+#homepage_albums {
+    
 }
 
-.albums_container::-webkit-scrollbar {
+.homepage_albums_container::-webkit-scrollbar {
   display: none;
 }
 
@@ -52,7 +43,7 @@
     margin-top: 5.5rem;
     margin-left: 2rem;
     width: 300px;
-    height: 300px;
+    height: auto;
     box-shadow: 5px 5px 5px #414141;
     border-radius: 4px;
 }

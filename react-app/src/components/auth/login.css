@@ -1,17 +1,24 @@
+
+html,body {
+    height: 100%;
+}
+
 body{
     background-color: rgb(59, 59, 59);
-    
+    display: table; 
+    margin: 0 auto;
 }
 
 .login_contain {
     background-color: rgb(59, 59, 59);
+    border: 1px solid #cf6b28;
+    border-radius: 5px;
     position: absolute;
-    top: 50%;
-    left: 60%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    top: 25%;
+    left: 35%;
+    /* margin-right: -50%; */
+    /* transform: translate(-25%, -25%); */
     padding: 8rem 10rem 8rem 10rem;
-    display: block;
 }
 
 .username,
@@ -24,7 +31,8 @@ body{
     width: 15rem;
     height: 2rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white
+    color: white;
+    font-size: larger;
 }
 
 /* .password_login {

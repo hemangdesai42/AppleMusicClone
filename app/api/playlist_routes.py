@@ -1,7 +1,7 @@
 from flask import Blueprint, request
 from app.models import db, User, Playlist, Song, playlistSong
 from flask_login import current_user, login_required
-from app.forms import PlaylistForm
+from app.forms import PlaylistForm, AddsongForm
 from sqlalchemy.orm import joinedload
 
 
@@ -51,15 +51,33 @@ def delete_playlist(id):
     return {'delete': playlist.to_dict()}
 
 # Add Song to Playlist
-@playlist_routes.route("/<int:playlist_id>/song/<int:song_id>", methods=["POST"])
+# @playlist_routes.route("/<int:playlist_id>/song/<int:song_id>", methods=["POST"])
+# @login_required
+# def add_playlistsong(playlist_id, song_id):
+#     playlist = Playlist.query.filter_by(id=playlist_id).first()
+#     song = Song.query.filter_by(id=song_id).first()
+#     playlistSongs_insert = playlistSong.insert().values(playlist_id=playlist, song_id=song)
+#     db.session.execute(playlistSongs_insert)
+#     db.session.commit()
+#     return 
+
+# Add Song to Playlist using the form
+
+
+@playlist_routes.route("/<int:playlist_id>/song/<int:song_id>", methods=['POST'])
 @login_required
-def add_playlistsong(playlist_id, song_id):
-    playlist = Playlist.query.filter_by(id=playlist_id).first()
-    song = Song.query.filter_by(id=song_id).first()
-    playlistSongs_insert = playlistSong.insert().values(playlist_id=playlist, song_id=song)
-    db.session.execute(playlistSongs_insert)
-    db.session.commit()
-    return 
+def add_playlistsong():
+    form = AddsongForm()
+    playlist = Playlist.query.get(Playlist.id).first()
+    song = Song.query.get(Song.id).first()
+    if form:
+        addaSong = playlistSong.insert().values(
+            playlist_id=playlist,
+            song_id=song
+        )
+        db.session.execute(addaSong)
+        db.session.commit()
+        return
 
 # #Remove Song from Playlist
 # @playlist_routes.route("/<int:playlistId>/song/<int:songId>", methods=["DELETE"])
