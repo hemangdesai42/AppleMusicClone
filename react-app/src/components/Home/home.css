@@ -30,10 +30,10 @@
     
 }
 
-.homepage_albums_container,
+/* .homepage_albums_container,
 #homepage_albums {
     
-}
+} */
 
 .homepage_albums_container::-webkit-scrollbar {
   display: none;
