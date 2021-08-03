@@ -1,7 +1,7 @@
 from .db import db
 from .user import User
 from .song import Song
-from .playlistsong import playlistSong
+from .playlistSong import playlistSong
 
 
 class Playlist(db.Model):

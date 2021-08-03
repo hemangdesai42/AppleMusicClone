@@ -1,9 +1,9 @@
 const ADD_SONG = "ADD_SONG";
 
 
-const addPlaylistsong = (playlist_id, song_id) => ({
+const addPlaylistsong = (data) => ({
     type: ADD_SONG,
-    payload: playlist_id, song_id
+    payload: data
 })
 
 
@@ -29,8 +29,8 @@ export const addSong = (playlist_id, song_id) => async (dispatch) => {
 
 
 const initialState = { 
-    playlist_id: null,
-    song_id: null
+    playlist_id: '',
+    song_id: ''
 }
 
 export default function addSongReducer(state = initialState, action) {

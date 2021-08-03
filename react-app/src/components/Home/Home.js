@@ -17,9 +17,10 @@ function Home() {
     }, [dispatch]);
   
     return (
-        <div className='albums_container'>
-            <h1 className='title_library'>Recently Added</h1>
-            <div className='line_library'>__________________________________________________________________________________________________________________________________________</div>
+        <div>
+        <h1 className='title_library'>Recently Added</h1>
+        <div className='homepage_albums_container' id='homepage_albums'>
+            {/* <div className='line_library'>_______________________________________________________________________________________________________________________________________________</div> */}
             {albumsData ? albumsData.slice(0).reverse().map((album) => {
                 return (
                     <div className='home_items'>
@@ -29,6 +30,7 @@ function Home() {
                     </div>
                     ) 
                 }) : null}
+        </div>
         </div>
     )
 
