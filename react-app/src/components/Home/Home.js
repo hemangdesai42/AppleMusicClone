@@ -18,7 +18,7 @@ function Home() {
   
     return (
         <div>
-        <h1 className='title_library'>Recently Added</h1>
+        <div id='title_library'>Recently Added</div>
         <div className='homepage_albums_container' id='homepage_albums'>
             {/* <div className='line_library'>_______________________________________________________________________________________________________________________________________________</div> */}
             {albumsData ? albumsData.slice(0).reverse().map((album) => {
