@@ -19,27 +19,31 @@ function Home() {
     window.onscroll = function () { scrollFunction() };
 
     function scrollFunction() {
-        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 80) {
             document.getElementById("title__library").style.fontSize = "0px";
         } else {
-            document.getElementById("title__library").style.fontSize = "30px";
+            document.getElementById("title__library").style.fontSize = "40px";
         }
     }
   
     return (
-        <div>
-        <div id='title__library'>Recently Added</div>
-        <div className='homepage_albums_container' id='homepage_albums'>
-            {/* <div className='line_library'>_______________________________________________________________________________________________________________________________________________</div> */}
-            {albumsData ? albumsData.slice(0).reverse().map((album) => {
-                return (
-                    <div id='homepage__items'>
-                        <NavLink to={`/albums/${album['id']}`}><img className='homepage__coverart' src={album['imageUrl']}></img></NavLink>
-                        <div className='homepage__names'>{album['name']}</div>
-                        
-                    </div>
-                    ) 
-                }) : null}
+        <div id="homepage__container">
+        <div id="homepage__title_container">
+            <div id='title__library'>Recently Added</div>
+        </div>
+        <div id="homepage__contents">
+            <div id='homepage_albums'>
+                {/* <div className='line_library'>_______________________________________________________________________________________________________________________________________________</div> */}
+                {albumsData ? albumsData.slice(0).reverse().map((album) => {
+                    return (
+                        <div id='homepage__items'>
+                            <NavLink to={`/albums/${album['id']}`}><img id='homepage__coverart' src={album['imageUrl']}></img></NavLink>
+                            <div id='homepage__names'>{album['name']}</div>
+                            
+                        </div>
+                        ) 
+                    }) : null}
+            </div>
         </div>
         </div>
     )
