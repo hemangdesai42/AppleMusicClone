@@ -15,17 +15,27 @@ function Home() {
             await dispatch(homeData())
         })();
     }, [dispatch]);
+
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+            document.getElementById("title__library").style.fontSize = "0px";
+        } else {
+            document.getElementById("title__library").style.fontSize = "30px";
+        }
+    }
   
     return (
         <div>
-        <div id='title_library'>Recently Added</div>
+        <div id='title__library'>Recently Added</div>
         <div className='homepage_albums_container' id='homepage_albums'>
             {/* <div className='line_library'>_______________________________________________________________________________________________________________________________________________</div> */}
             {albumsData ? albumsData.slice(0).reverse().map((album) => {
                 return (
-                    <div className='home_items'>
-                        <NavLink to={`/albums/${album['id']}`}><img className='coverart' src={album['imageUrl']}></img></NavLink>
-                        <div className='name2'>{album['name']}</div>
+                    <div id='homepage__items'>
+                        <NavLink to={`/albums/${album['id']}`}><img className='homepage__coverart' src={album['imageUrl']}></img></NavLink>
+                        <div className='homepage__names'>{album['name']}</div>
                         
                     </div>
                     ) 

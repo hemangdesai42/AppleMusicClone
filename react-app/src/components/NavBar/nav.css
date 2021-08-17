@@ -1,18 +1,21 @@
 .body {
     background-color: #2e2e2e;
     width: 230px;
-    
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .navbar {
     display: flex;
     width: 230px;
-    height: 1000px;
+    height: 100%;
     border: 1px solid #373737;
     background-color: #2e2e2e;
     position: fixed;
     top: 0;
     left: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .music {
