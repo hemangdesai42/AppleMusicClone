@@ -26,21 +26,21 @@
 }
 
 #homepage__contents {
-    position: fixed;
+    position: absolute;
     left: 40rem;
     top: 8rem;
+    height: 80%;
+    padding-bottom: 1rem
 }
 
 #homepage_albums {
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 1;
-    height: 100%;
     margin-left: -0.5rem;
-    /* position: fixed; */
+    overflow-y: auto;
     transform: translateX(-30%);
     width: 100vh;
-    top: 10%;
     height: 100vh;
 }
 
