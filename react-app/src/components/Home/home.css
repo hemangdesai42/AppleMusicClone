@@ -25,13 +25,19 @@
     transition: 0.2s;
 }
 
+#homepage__contents {
+    position: fixed;
+    left: 40rem;
+    top: 8rem;
+}
+
 #homepage_albums {
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 1;
     height: 100%;
-    margin-left: -1rem;
-    position: fixed;
+    margin-left: -0.5rem;
+    /* position: fixed; */
     transform: translateX(-30%);
     width: 100vh;
     top: 10%;
