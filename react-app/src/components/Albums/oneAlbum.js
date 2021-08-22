@@ -30,20 +30,20 @@ function Album() {
 
 
     return (
-        <div className="page_container">
-        <div className='album_container'>
-            <div className='album'>
-                {albumInfo ? <div className='album_names'>{albumInfo['name']}</div> : null}
-                {albumInfo ? <div><img className='one_coverart' src={albumInfo['imageUrl']} alt=''></img></div> : null}
-                {artistInfo ? <div className='artist_name'>{(artistInfo[0])['name']}</div> : null}
+        <div id="page__container">
+        <div id='onealbum__container'>
+            <div id='one__album'>
+                {albumInfo ? <div id='onealbum__names'>{albumInfo['name']}</div> : null}
+                {albumInfo ? <div><img id='one__coverart' src={albumInfo['imageUrl']} alt=''></img></div> : null}
+                {artistInfo ? <div id='oneartist__name'>{(artistInfo[0])['name']}</div> : null}
             </div>
             </div>
-            <table className='songs_container'>
+            <table id='songs_container'>
                 <tbody>
                 {allSongs ? allSongs.map((song) => {
                     return (
-                        <tr className='oneAlbum_items'>
-                            <td className='songNames'>{song['name']}</td>
+                        <tr id='oneAlbum__items'>
+                            <td id='song__names'>{song['name']}</td>
                             <PlayButton song={song}/><QueueButton song={song}/>
                         </tr>
                     )
