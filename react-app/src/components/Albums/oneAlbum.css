@@ -13,7 +13,7 @@
     display: flex;
     position: fixed;
     margin-top: 3rem;
-    margin-left: -15rem;
+    margin-left: -20rem;
     /* flex-direction: row;
     flex-wrap: wrap; */
     justify-content: center;
@@ -39,7 +39,7 @@
     font-size: 35px;
     position: absolute;
     color: white;
-    /* margin-left: 24rem; */
+    margin-left: 22rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-top: 13rem;
     min-width: 25rem;
@@ -49,7 +49,7 @@
     font-size: 20px;
     position: absolute;
     color: #cf6b28;
-    /* margin-left: 24rem; */
+    margin-left: 22rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-top: -9rem;
     min-width: 15rem;   
@@ -59,7 +59,7 @@
     display: block;
     position: fixed;
     margin-top: 30rem;
-    /* margin-left: 17rem; */
+    margin-left: -20rem;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
