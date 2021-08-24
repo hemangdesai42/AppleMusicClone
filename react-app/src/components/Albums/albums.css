@@ -1,64 +1,76 @@
-/* .body, .html {
-    max-width: 100vw;
-    max-height: 921px
-} */
-
-#album_library {
-    color: white;
-    position: absolute;
-    left: 4%;
-    top: -2%;
-    margin-bottom: 25%;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-#albumline_library {
-    color: white;
-    position: absolute;
-    left: 3%;
-    top: 5%;
-    color: #cf6b28;
-}
-
-#album_holder {
-    height: 80%;
-    margin-top: 6rem;
-    margin-bottom: -30rem;
-}
-
-#albums_container {
-    display: flex;
-    position: fixed;
-    margin-top: 8rem;
-    margin-left: -30rem;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    overflow-y: scroll;
-    max-width: 1004px;
-    min-height: 921px;
+.body, .html {
+    max-width: 60%;
     height: 100%;
+    overflow-y: hidden;
+
 }
 
-#albums_container::-webkit-scrollbar {
+.body::-webkit-scrollbar {
   display: none;
 }
 
-#coverart1 {
+.html::-webkit-scrollbar {
+  display: none;
+}
+
+#allalbum__title_container {
+    position: fixed;
+    left: 24rem;
+    top: 7rem;
+}
+
+#allbum_library {
+    font-size: 40px;
+    color: white;
+    text-decoration: underline;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: 0.2s;
+}
+
+
+/* #allbum_holder {
+    height: 80%;
+    margin-top: 6rem;
+    margin-bottom: -30rem;
+} */
+
+#allalbums {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 1;     
+    margin-left: -0.5rem;
+    overflow-y: auto;
+    transform: translateX(-30%);
+    width: 100vh;
+    height: 100vh;
+}
+
+#allalbums::-webkit-scrollbar {
+  display: none;
+}
+
+#allbums__content {
+    position: relative;
+    left: 40rem;
+    top: 8rem;
+    height: 80%;
+    padding-bottom: 1rem
+}
+
+#allalbum__coverart {
+    margin-top: 5.5rem;
     margin-left: 2rem;
     width: 300px;
     height: 300px;
     box-shadow: 5px 5px 5px #414141;
     border-radius: 4px;
-    margin-top: -1rem;
 }
 
-#album_name {
+#allalbum_name {
     font-size: 25px;
     position: absolute;
     color: white;
-    margin-left: 2.5rem;
+    margin-left: 2rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }

@@ -38,7 +38,7 @@
 #homepage_albums {
     display: flex;
     flex-wrap: wrap;
-    flex: 1 1 1;
+    flex: 1 1 1;     
     margin-left: -0.5rem;
     overflow-y: auto;
     transform: translateX(-30%);

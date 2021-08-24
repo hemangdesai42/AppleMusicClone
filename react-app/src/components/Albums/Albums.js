@@ -15,20 +15,35 @@ function Albums() {
         })();
     }, [dispatch]);
     
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 80) {
+            document.getElementById("allalbum__title_container").style.fontSize = "0px";
+        } else {
+            document.getElementById("allalbum__title_container").style.fontSize = "40px";
+        }
+    }
+
     
 
     return (
-        <div id='albums_container'>
-            <h1 id='album_library'>My Albums</h1>
-            <div id='albumline_library'>__________________________________________________________________________________________________________________________________________</div>
-            {albums ? albums.slice(0).reverse().map((album) => {
-                return (
-                    <div id='album_holder'>
-                        <NavLink to={`/albums/${album['id']}`}><img id='coverart1' src={album['imageUrl']}></img></NavLink>
-                        <div id='album_name'>{album['name']}</div>
-                    </div>
-                )
-            }) : null}
+        <div id="allalbum__container">
+            <div id="allalbum__title_container">
+                <div id='allbum_library'>My Albums</div>
+            </div>
+        <div id='allbums__content'>
+            <div id='allalbums'>
+                {albums ? albums.slice(0).reverse().map((album) => {
+                    return (
+                        <div id='allbum_holder'>
+                            <NavLink to={`/albums/${album['id']}`}><img id='allalbum__coverart' src={album['imageUrl']}></img></NavLink>
+                            <div id='allalbum_name'>{album['name']}</div>
+                        </div>
+                    )
+                }) : null}
+            </div>
+        </div>
         </div>
     )
 

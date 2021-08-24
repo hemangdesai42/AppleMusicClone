@@ -33,7 +33,6 @@ function Home() {
         </div>
         <div id="homepage__contents">
             <div id='homepage_albums'>
-                {/* <div className='line_library'>_______________________________________________________________________________________________________________________________________________</div> */}
                 {albumsData ? albumsData.slice(0).reverse().map((album) => {
                     return (
                         <div id='homepage__items'>
