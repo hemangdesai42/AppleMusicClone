@@ -1,6 +1,8 @@
 .body, .html {
     max-width: 60%;
     height: 100%;
+    overflow-y: hidden;
+
 }
 
 .body::-webkit-scrollbar {
@@ -26,7 +28,7 @@
 }
 
 #homepage__contents {
-    position: absolute;
+    position: relative;
     left: 40rem;
     top: 8rem;
     height: 80%;
@@ -42,6 +44,10 @@
     transform: translateX(-30%);
     width: 100vh;
     height: 100vh;
+}
+
+#homepage_albums::-webkit-scrollbar {
+  display: none;
 }
 
 
