@@ -17,18 +17,23 @@ function Artists() {
     }, [dispatch]);
 
     return (
-        <div className='artists_container'>
-            <h1 className='artists_title'>My Artists</h1>
-            <div className='line'>__________________________________________________________________________________________________________________________________________</div>
-            {artists ? artists.slice(0).reverse().map((artist) => {
-                return (
-                    <div className='artists_items'>
-                        <img className='artists_img' src={artist['imageUrl']}></img>
-                        <br></br>
-                        <div className='artists_name'>{artist['name']}</div>
-                    </div>
-                )
-            }) : null}
+        <div id='artists__container'>
+        <div id="artists__title_container">
+            <div id='artists__title'>Recently Added</div>
+        </div>
+            <div id="artists__contents">
+                <div id='artists__main'>
+                    {artists ? artists.slice(0).reverse().map((artist) => {
+                        return (
+                            <div id='artists_items'>
+                                <img id='artists__img' src={artist['imageUrl']}></img>
+                                <br></br>
+                                <div id='artists__name'>{artist['name']}</div>
+                            </div>
+                        )
+                    }) : null}
+            </div>
+        </div>
         </div>
     )
 
