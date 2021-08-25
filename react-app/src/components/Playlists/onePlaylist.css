@@ -1,33 +1,33 @@
-.one_playlist {
+#one_playlist {
     overflow-x: hidden;
     overflow-y: scroll;
-    max-width: 1004px;
-    min-height: 921px;
+    /* max-width: 1004px;
+    min-height: 921px; */
 }
 
-.one_playlist::-webkit-scrollbar {
+#one_playlist::-webkit-scrollbar {
   display: none;
 }
 
-.one_playlist_container{
+#one_playlist_container{
     display: flex;
     position: fixed;
     margin-top: 3rem;
-    margin-left: 15rem;
+    margin-left: -20rem;
     /* flex-direction: row;
     flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
 }
 
-.one_playlist_container::-webkit-scrollbar {
+#one_playlist_container::-webkit-scrollbar {
   display: none;
 }
 
 
-.playlist_art {
+#playlist_art {
     margin-top: 5.5rem;
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
     width: 300px;
     height: 300px;
     box-shadow: 5px 5px 5px #414141;
@@ -35,37 +35,37 @@
 }
 
 
-.playlist__Name {
-    font-size: 35px;
-    position: absolute;
-    color: white;
-    margin-left: 24rem;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 13rem;
-    min-width: 25rem;
+#playlist__Name {
+  font-size: 35px;
+  position: absolute;
+  color: white;
+  margin-left: 22rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 13rem;
+  min-width: 25rem;
 }
 
 
-.songs_container {
-    display: block;
-    position: fixed;
-    margin-top: 30rem;
-    margin-left: 17rem;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    /* height: 100%; */
-    font-size: 25px;
-    border: 0px solid;
-    width: 900px;
-    height: 300px;
-    color: white;
+#playlistSongs_contain {
+  display: block;
+  position: fixed;
+  margin-top: 30rem;
+  margin-left: -20rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* overflow-x: hidden;
+  overflow-y: scroll; */
+  /* height: 100%; */
+  font-size: 25px;
+  border: 0px solid;
+  width: 900px;
+  height: 300px;
+  color: white;
 }
 
-.songs_container::-webkit-scrollbar {
+#playlistSongs_contain::-webkit-scrollbar {
   display: none;
 }
 
@@ -78,45 +78,24 @@ table, th, td {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.play {
+#play {
     position: fixed;
     margin-top: 10px;
     margin-left: -50px;
 }
 
-.plus {
+#plus {
     position: fixed;
     margin-top: 10px;
     margin-left: -20px;
 }
 
-.playlistSongs_contain {
-  display: block;
-    position: fixed;
-    margin-top: 30rem;
-    margin-left: 17rem;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    /* height: 100%; */
-    font-size: 25px;
-    border: 0px solid;
-    width: 900px;
-    height: 300px;
-    color: white;
-}
 
-.playlistSongs_contain::-webkit-scrollbar {
-  display: none;
-}
 
 .addSongs {
   position: absolute;
   top: 65%;
-  left: 24rem;
+  left: 22rem;
   margin: 1px 5px 1px 5px;
   background-color: #1a1a1a
 }
