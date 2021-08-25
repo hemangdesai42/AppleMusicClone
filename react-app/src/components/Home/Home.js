@@ -16,15 +16,15 @@ function Home() {
         })();
     }, [dispatch]);
 
-    window.onscroll = function () { scrollFunction() };
+    // window.onscroll = function () { scrollFunction() };
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 80) {
-            document.getElementById("homepage__title_container").style.fontSize = "0px";
-        } else {
-            document.getElementById("homepage__title_container").style.fontSize = "40px";
-        }
-    }
+    // function scrollFunction() {
+    //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 80) {
+    //         document.getElementById("homepage__title_container").style.fontSize = "0px";
+    //     } else {
+    //         document.getElementById("homepage__title_container").style.fontSize = "40px";
+    //     }
+    // }
   
     return (
         <div id="homepage__container">
