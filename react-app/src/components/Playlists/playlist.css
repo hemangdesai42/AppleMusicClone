@@ -1,90 +1,82 @@
-.playlist_container {
-    display: flex;
-    position: fixed;
-    margin-top: 1rem;
-    margin-left: 6rem;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    overflow-y: scroll;
-    max-width: 1004px;
-    max-height: 921px;
+.body, .html {
+    max-width: 60%;
     height: 100%;
-    width: 100%
+    overflow-y: hidden;
+
 }
 
-.playlist_container::-webkit-scrollbar {
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+.html::-webkit-scrollbar {
+  display: none;
+}
+
+#playlists__title_container {
+    position: fixed;
+    left: 24rem;
+    top: 7rem;
+}
+
+#playlist__title {
+    font-size: 40px;
+    color: white;
+    text-decoration: underline;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: 0.2s;
+}
+
+#contents_container {
+    position: relative;
+    left: 28rem;
+    top: 8rem;
+    height: 80%;
+    padding-bottom: 1rem
+}
+
+#playlists__main {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 1;     
+    margin-left: -0.5rem;
+    overflow-y: auto;
+    transform: translateX(-30%);
+    width: 100vh;
+    height: 100vh;
+}
+
+#playlists__main::-webkit-scrollbar {
   display: none;
 }
 
 
-.createPlaylist {
+#playlist_coverart {
+    margin-top: 5.5rem;
+    margin-left: 2rem;
+    width: 300px;
+    height: 300px;
+    box-shadow: 5px 5px 5px #414141;
+    border-radius: 4px;
+}
+
+
+
+#playlist__name {
+    font-size: 25px;
     position: absolute;
-    top: 12.5%;
-    left: 40%;
+    color: white;
+    margin-left: 2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 0.5rem;
+}
+
+
+#createPlaylist {
+    position: relative;
+    /* top: 12.5%; */
+    left: 10px;
     margin: 1px 5px 1px 5px;
     background-color: #1a1a1a
 }
 
-.playlist_library {
-    color: white;
-    position: absolute;
-    left: 20%;
-    top: 10%;
-    margin-bottom: 25%;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.playlist_line{
-    color: white;
-    position: absolute;
-    left: 20%;
-    top: 17%;
-    color: #cf6b28;
-    margin-bottom: 1rem;
-}
-
-.playlist_holder {
-    /* display: flex; */
-    height: 100%;
-    margin-top: -55rem;
-    margin-bottom: -55rem;
-}
-
-.contents_container {
-    display: flex;
-    position: fixed;
-    flex-direction: row;
-    top: 25%;
-    left: 20.5%;
-    flex-wrap: wrap;
-    align-items: center;
-    overflow-y: scroll;
-    max-width: 1004px;
-    min-height: 921px;
-    height: 50%;
-    margin-top: 0px;
-}
-
-.contents_container::-webkit-scrollbar {
-  display: none;
-}
-
-.playlist_coverart {
-    margin-left: 2rem;
-    width: 250px;
-    height: 250px;
-    box-shadow: 5px 5px 5px #414141;
-    border-radius: 4px;
-    margin-top: -1rem;
-}
-
-.playlist_title {
-    font-size: 25px;
-    position: absolute;
-    color: white;
-    margin-left: 2.5rem;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 1.5rem;
-}
