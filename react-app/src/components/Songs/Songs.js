@@ -18,19 +18,22 @@ function Songs() {
     }, [dispatch]);
 
     return (
-        <div className='main_container'>
-            <h1 className='mysongs'>My Songs</h1>
-            <div className='line_song1'>_________________________________________________________________________________________________________________</div>
-            <table className='songs_contain'>
-            {songs ? songs.sort((a, b) => a.timeM > b.timeM ? 1 : -1).map((song) => {
-                return (
-                    <tr className='song_items2'>
-                        <td className='song_name2'>{song['name']}</td>
-                        <PlayButton song={song}/><QueueButton song={song}/>
-                        <h7 className='song_artistName'>{song['artistName']}</h7>
-                    </tr>
-                )
-            }) : null}
+        <div id='songs__page_container'>
+            <div id="songs__title_container">
+                <div id='songs__title'>My Songs</div>
+            </div>
+            <table id='songs__page_contain'>
+                <tbody>
+                    {songs ? songs.map((song) => {
+                        return (
+                            <tr id='song_items2'>
+                                <td id='song__name'>{song['name']}</td>
+                                <td id='song__artistName'>{song['artistName']}</td>
+                                <PlayButton song={song} /><QueueButton song={song} />
+                            </tr>
+                        )
+                    }) : null}
+                </tbody>
             </table>
         </div>
     )
